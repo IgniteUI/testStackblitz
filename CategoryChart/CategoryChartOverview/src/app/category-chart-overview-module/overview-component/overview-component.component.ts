@@ -1,14 +1,13 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: "app-category-chart-overview",
-    styleUrls: ["./category-chart-overview.component.scss"],
-    templateUrl: "./category-chart-overview.component.html"
+  selector: 'app-overview-component',
+  templateUrl: './overview-component.component.html',
+  styleUrls: ['./overview-component.component.scss']
 })
-export class CategoryChartOverviewComponent {
+export class OverviewComponentComponent implements OnInit {
 
-    public chartType: string = "Auto";
+  public chartType: string = "Auto";
     public data: any;
 
     constructor() {
@@ -38,4 +37,9 @@ export class CategoryChartOverviewComponent {
         ];
         this.data = [ usaMedals, chinaMedals, russiaMedals ];
     }
+
+  ngOnInit() {
+  }
+  
+
 }
