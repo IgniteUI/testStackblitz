@@ -1,0 +1,23 @@
+{
+  "name": "react-ts",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "igniteui-react-charts": "^16.6.11",
+    "igniteui-react-core": "^16.6.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "tslib": "^1.9.3"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "react-scripts-ts": "latest"
+  }
+}
