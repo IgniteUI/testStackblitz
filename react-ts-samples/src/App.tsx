@@ -3,7 +3,7 @@ import { HashRouter, Route, } from "react-router-dom";
 import './App.css';
 
 import CategoryChartSample from "./CategoryChartSample";
-import Home from "./Home";
+// import Home from "./Home";
 import Logo from './logo.svg';
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
 
                 <div className="content">
                         {/* <Route path="/" component={Home}/> */}
-                        <Route exact={true} path="/" component={Home}/>
+                        <Route exact={true} path="/" component={CategoryChartSample}/>
                         {/* <Route path="/stuff" component={Stuff}/> */}
                         <Route path="/CategoryCharts" component={CategoryChartSample}/>
                 </div>
