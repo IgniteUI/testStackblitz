@@ -3,12 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@types/react": "^16.8.2",
-    "@types/react-dom": "^16.8.0",
-    "igniteui-react-charts": "beta",
-    "igniteui-react-core": "16.11.6-beta.0",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
     "tslib": "^1.7.1"
   },
   "scripts": {
