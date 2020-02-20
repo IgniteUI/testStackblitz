@@ -10,7 +10,7 @@ interface IAppState {
 }
 IgrCategoryChartModule.register();
 
-class App extends React.Component<any, any> {
+class App extends Component<IAppProps, IAppState> {
 
   public data: any;
   constructor(props: Readonly<IAppProps>) {
