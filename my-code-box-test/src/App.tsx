@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { IgrCategoryChartModule } from 'igniteui-react-charts';
 import { IgrCategoryChart} from 'igniteui-react-charts';
 
+interface IAppProps {
+}
+interface IAppState {
+    data: any[];
+    name: string
+}
 IgrCategoryChartModule.register();
 
 class App extends React.Component<any, any> {
 
   public data: any;
-  constructor(props: any) {
+  constructor(props: Readonly<IAppProps>) {
     super(props);
     this.state = {
             data: [
