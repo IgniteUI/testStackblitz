@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import { IgrCategoryChartModule } from 'igniteui-react-charts';
 import { IgrCategoryChart} from 'igniteui-react-charts';
 
