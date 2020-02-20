@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { IgrCategoryChartModule } from 'igniteui-react-charts';
 import { IgrCategoryChart} from 'igniteui-react-charts';
 
+interface IAppProps {
+}
 IgrCategoryChartModule.register();
 
-class App extends Component<any, any> {
+class App extends Component<IAppProps, any> {
 
   public data: any;
   constructor(props: any) {
