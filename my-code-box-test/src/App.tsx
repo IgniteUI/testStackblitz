@@ -4,16 +4,12 @@ import { IgrCategoryChart} from 'igniteui-react-charts';
 
 interface IAppProps {
 }
-interface IAppState {
-    data: any[];
-    name: string
-}
 IgrCategoryChartModule.register();
 
-class App extends Component<IAppProps, IAppState> {
+class App extends Component<IAppProps, any> {
 
   public data: any;
-  constructor(props: Readonly<IAppProps>) {
+  constructor(props: any) {
     super(props);
     this.state = {
             data: [
