@@ -7,7 +7,7 @@ IgrCategoryChartModule.register();
 class App extends React.Component<any, any> {
 
   public data: any;
-  constructor(props: Readonly<IAppProps>) {
+  constructor(props: any) {
     super(props);
     this.state = {
             data: [
