@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import logo from './logo.svg';
 import { IgrCategoryChartModule } from 'igniteui-react-charts'
 import { IgrCategoryChart} from 'igniteui-react-charts'
 
