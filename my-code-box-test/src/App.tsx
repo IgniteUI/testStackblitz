@@ -13,7 +13,6 @@ IgrCategoryChartModule.register();
 class App extends Component<IAppProps, IAppState> {
 
   public data: any;
-  _isMounted: boolean = false;
   constructor(props: Readonly<IAppProps>) {
     super(props);
     this.state = {
@@ -30,15 +29,6 @@ class App extends Component<IAppProps, IAppState> {
         };
     
   }
-  
-  componentDidMount() {
-    this._isMounted = true;
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
   render() {
   return (
     <div>
