@@ -1,7 +1,7 @@
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./SharedStyles.css";
-import { SharedComponent } from "./data-grid/SharedComponent";
+import { SharedComponent } from "../data-grid/SharedComponent";
 import { Products } from './Products';
 
 // sparkline modules:

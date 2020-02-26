@@ -4,7 +4,7 @@ import { IgrSparklineCoreModule } from 'igniteui-react-charts';
 import { UnknownValuePlotting } from 'igniteui-react-core';
 
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 import { SharedData } from "./SharedData";

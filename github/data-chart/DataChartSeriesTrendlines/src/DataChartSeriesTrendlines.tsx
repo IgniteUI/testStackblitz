@@ -12,7 +12,7 @@ import { IgrDataChartInteractivityModule } from 'igniteui-react-charts';
 import { IgrDataChartCategoryTrendLineModule } from 'igniteui-react-charts';
 // legend's modules:
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 

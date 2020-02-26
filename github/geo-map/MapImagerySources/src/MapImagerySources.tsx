@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./GeoMapStyles.css";
 
 import { IgrBingMapsMapImagery } from 'igniteui-react-maps';

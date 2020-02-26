@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./GeoMapStyles.css";
 import WorldUtils from "./WorldUtils"
 

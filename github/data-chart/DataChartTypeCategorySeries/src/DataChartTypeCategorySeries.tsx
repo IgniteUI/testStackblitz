@@ -25,7 +25,7 @@ import { IgrLegend } from 'igniteui-react-charts';
 import { IgrLegendModule } from 'igniteui-react-charts';
 
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 import { SampleCategoryData } from "./SampleCategoryData";

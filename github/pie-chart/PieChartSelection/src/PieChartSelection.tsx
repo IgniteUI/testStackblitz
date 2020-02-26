@@ -4,7 +4,7 @@ import { IgrPieChartBase } from 'igniteui-react-charts';
 import { IIgrPieChartBaseProps } from 'igniteui-react-charts';
 import { IgrSliceClickEventArgs } from 'igniteui-react-charts';
 import * as React from "react";
-import "./styles.css";
+import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 
