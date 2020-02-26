@@ -1,8 +1,8 @@
 
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./GeoMapStyles.css";
-import WorldUtils from "./utilities/WorldUtils"
+import WorldUtils from "././utilities/WorldUtils"
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
@@ -89,7 +89,7 @@ export default class MapCustomTooltips extends React.Component {
         const lat = WorldUtils.toStringLat(dataItem.lat);
         const lon = WorldUtils.toStringLon(dataItem.lon);
         const scr = process.env.PUBLIC_URL + '/images/' + dataItem.isoCode.toLowerCase() + '.svg';
-        // const scr = require('./images/' + dataItem.isoCode.toLowerCase() + '.svg')
+        // const scr = require('././images/' + dataItem.isoCode.toLowerCase() + '.svg')
 
         const seriesStyle = { color: dataContext.series.markerOutline } as React.CSSProperties;
         const contentStyle = { display: "inline-block", marginLeft: 5 } as React.CSSProperties;

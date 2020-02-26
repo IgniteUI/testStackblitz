@@ -1,8 +1,8 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./GeoMapStyles.css";
-import DataUtils from "./utilities/DataUtils"
-import WorldUtils from "./utilities/WorldUtils"
+import DataUtils from "././utilities/DataUtils"
+import WorldUtils from "././utilities/WorldUtils"
 import { IgrGeographicMapImagery } from 'igniteui-react-maps';
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';

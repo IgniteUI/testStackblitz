@@ -2,7 +2,7 @@ import { IgrRadialGauge } from 'igniteui-react-gauges';
 import { IgrRadialGaugeRange } from 'igniteui-react-gauges';
 import { IgrRadialGaugeModule } from 'igniteui-react-gauges';
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 

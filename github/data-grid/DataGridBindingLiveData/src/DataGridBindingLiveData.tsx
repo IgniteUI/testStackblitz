@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './SharedStyles.css';
 import { FinancialData } from "./FinancialData";
-import { TaskUtil } from "./utilities/TaskUtil";
+import { TaskUtil } from "././utilities/TaskUtil";
 // IgrLiveGrid modules
 import { IgrLiveGrid } from 'igniteui-react-grids';
 import { IgrLiveGridModule } from 'igniteui-react-grids';

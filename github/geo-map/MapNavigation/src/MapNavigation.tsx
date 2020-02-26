@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./GeoMapStyles.css";
 import "./GeoMapPanel.css";
 import { MapUtils, MapRegion } from "./MapUtils";

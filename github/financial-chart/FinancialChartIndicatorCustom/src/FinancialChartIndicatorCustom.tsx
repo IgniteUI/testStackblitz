@@ -3,7 +3,7 @@ import { IgrFinancialChartCustomIndicatorArgs } from 'igniteui-react-charts';
 import { IgrFinancialChart } from 'igniteui-react-charts';
 import { IgrFinancialChartModule } from 'igniteui-react-charts';
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 import { StocksUtility } from "./StocksUtility";
 

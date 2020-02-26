@@ -1,8 +1,8 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
-import { SharedComponent } from "../data-grid/SharedComponent";
-import { Products } from './utilities/Products';
+import { SharedComponent } from "./data-grid/SharedComponent";
+import { Products } from '././utilities/Products';
 
 // sparkline modules:
 import { IgrSparkline } from 'igniteui-react-charts';

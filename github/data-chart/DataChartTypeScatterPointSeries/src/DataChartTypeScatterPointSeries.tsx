@@ -16,7 +16,7 @@ import { IgrNumberAbbreviatorModule } from 'igniteui-react-charts';
 import { MarkerType } from 'igniteui-react-charts';
 
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 import { SampleScatterStats } from "./SampleScatterStats";
 

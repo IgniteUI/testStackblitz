@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 
 import { SharedData } from './SharedData';

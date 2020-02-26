@@ -3,7 +3,7 @@ import { IgrSparklineModule } from 'igniteui-react-charts';
 import { IgrSparklineCoreModule } from 'igniteui-react-charts';
 
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 
 IgrSparklineCoreModule.register();

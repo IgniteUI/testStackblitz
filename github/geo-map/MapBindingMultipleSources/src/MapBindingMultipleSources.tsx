@@ -1,7 +1,7 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./GeoMapStyles.css";
-import WorldConnections from "./utilities/WorldConnections";
+import WorldConnections from "././utilities/WorldConnections";
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';

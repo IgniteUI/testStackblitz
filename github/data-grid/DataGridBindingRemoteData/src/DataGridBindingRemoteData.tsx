@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import './odatajs-4.0.0';
 import "./SharedStyles.css";
 

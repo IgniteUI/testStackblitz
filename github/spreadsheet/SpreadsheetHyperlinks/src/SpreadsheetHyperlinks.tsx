@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
-import { ExcelUtility } from "../excel-library/ExcelUtility";
+import { ExcelUtility } from "./excel-library/ExcelUtility";
 
 import { IgrExcelXlsxModule } from 'igniteui-react-excel';
 import { IgrExcelCoreModule } from 'igniteui-react-excel';

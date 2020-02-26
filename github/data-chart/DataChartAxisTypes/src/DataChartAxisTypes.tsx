@@ -20,7 +20,7 @@ import { SampleFinancialData } from "./SampleFinancialData";
 import { SampleScatterData } from "./SampleScatterData";
 
 import * as React from "react";
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 import { IgrBarSeries } from 'igniteui-react-charts';

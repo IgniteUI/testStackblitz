@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles.css";
+import "./styles.css";
 import "./SharedStyles.css";
 
 import { IgrExcelXlsxModule } from 'igniteui-react-excel';
@@ -10,7 +10,7 @@ import { IgrExcelModule } from 'igniteui-react-excel';
 import { IgrSpreadsheetModule } from 'igniteui-react-spreadsheet';
 import { IgrSpreadsheet } from 'igniteui-react-spreadsheet';
 
-import { ExcelUtility } from "../excel-library/ExcelUtility";
+import { ExcelUtility } from "./excel-library/ExcelUtility";
 import { SpreadsheetAction } from 'igniteui-react-spreadsheet';
 
 import { SharedComponent } from "./SharedComponent";
