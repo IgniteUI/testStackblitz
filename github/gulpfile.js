@@ -74,8 +74,7 @@ function getTemplates() {
 
 exports.getTemplates = getTemplates;
 
-//TODO Copy Template SharedComponent, SharedData, SharedFiles
-// (varied per sample) (See getTemplates)
+
 
 //Inject packages for package.json
 var packageMap = [
