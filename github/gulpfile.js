@@ -196,6 +196,7 @@ function scripts(cb) {
             var isStocksUtility  = readFile.includes('import { StocksUtility } from "./StocksUtility";');
             var isStocksHistory  = readFile.includes('import { StocksHistory } from "./StocksHistory";');
             //geomap
+            var isMapBindingDataCSV = readFile.includes("import MapBindingDataCSV from './MapBindingDataCSV';")
             var isGeoMapStyles  = readFile.includes('import { GeoMapStyles } from "./GeoMapStyles";');
             var isGeoMapPanel  = readFile.includes('import { GeoMapPanel } from "./GeoMapPanel";');
             var isDataUtils  = readFile.includes('import DataUtils from "../../utilities/DataUtils";');
@@ -314,8 +315,12 @@ function scripts(cb) {
                 .pipe(gulp.dest(file.dirname + "/src"))
             }  
             //GeoMap
+            if(isMapBindingDataCSV  == true) {
+                gulp.src("./src/samples/" + original + "/" + "isMapBindingDataCSV.tsx")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            } 
             if(isGeoMapStyles == true) {
-                gulp.src("./src/samples/" + original + "/" + "GeoMapStyles.tsx")
+                gulp.src("./src/samples/" + original + "/" + "GeoMapStyles.css")
                 .pipe(gulp.dest(file.dirname + "/src"))
             } 
             if(isGeoMapPanel == true) {
