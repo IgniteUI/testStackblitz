@@ -1,6 +1,6 @@
 
 # View on Code and Box
-[Run this sample](https://codesandbox.io/s/github/IgniteUI/testStackblitz/tree/master/github/bullet-graph/BulletGraphBackground?fontsize=14&hidenavigation=1&theme=dark&view=preview)                        
+[Run this sample] (https://codesandbox.io/s/github/IgniteUI/testStackblitz/tree/master/github/bullet-graph/BulletGraphBackground?fontsize=14&hidenavigation=1&theme=dark&view=preview)                        
         
 # View on Code and Box with Editor #
             
