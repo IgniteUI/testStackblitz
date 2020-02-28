@@ -19,8 +19,8 @@ var templateFiles = [];
 
 //**delete root** 
 function clean(cb) {
-    del("./github/**", {force:true});
-    del("./github");
+    del.sync("./github/**/*.*", {force:true});
+    del.sync("./github");
     cb();
 }
 exports.clean = clean;
@@ -53,7 +53,28 @@ function pack() {
         }
         `;       
         fs.writeFileSync(file.dirname + "/sample-manifest.json", manifest);
-        fs.copyRecursive('./templates/', file.dirname, cb);
+        cb(null, file);
+    }))
+    //Create README file
+    .pipe(es.map(function(file, cb) {
+        var getResources = path.join(file.dirname, "../");
+        var original = path.basename(getResources);
+        var config = `
+# View on CodeSandbox 
+[Run this sample in CodeSandbox](https://codesandbox.io/embed/github/IgniteUI/testStackblitz/tree/master/github/${original + "/" + file.basename.replace('.tsx','')}?fontsize=14&hidenavigation=1&theme=dark&view=preview)                        
+        
+# View on CodeSandbox with Editor
+            
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <body>           
+        <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/testStackblitz/tree/master/github/${original + "/" + file.basename.replace('.tsx','')}?fontsize=14&hidenavigation=1&theme=dark&view=preview">
+            <img alt="Edit fbusv" src="https://codesandbox.io/static/img/play-codesandbox.svg"/>
+        </a>
+    </body>
+</html>
+        `;       
+        fs.writeFileSync(file.dirname + "/README.md", config);
+        cb(null, file);
     }))
 }
 exports.pack = pack;
@@ -74,7 +95,7 @@ function getTemplates() {
 
 exports.getTemplates = getTemplates;
 
-
+// (varied per sample) (See getTemplates)
 
 //Inject packages for package.json
 var packageMap = [
@@ -145,47 +166,49 @@ function scripts(cb) {
             
             var f = fs.readFileSync(sampleFile);
 
+            var readFile = f.toString();
             //general
-            var isStylesCssContent = f.toString().includes('import "../styles.css";');
-            var isSharedStylesCssContent = f.toString().includes('import "./SharedStyles.css";');
-            var isSharedStylesCssContent2 = f.toString().includes("import './SharedStyles.css';");
-            var isSharedData = f.toString().includes('import { SharedData } from "./SharedData";');
-            var isSharedComponent = f.toString().includes('import { SharedComponent } from "./SharedComponent"');
+            var isStylesCssContent = readFile.includes('import "../styles.css";');
+            var isSharedStylesCssContent = readFile.includes('import "./SharedStyles.css";');
+            var isSharedStylesCssContent2 = readFile.includes("import './SharedStyles.css';");
+            var isSharedData = readFile.includes('import { SharedData } from "./SharedData";');
+            var isSharedComponent = readFile.includes('import { SharedComponent } from "./SharedComponent"');
             //datachart
-            var isSampleFinancialData = f.toString().includes('import { SampleFinancialData } from "./SampleFinancialData";');
-            var isSampleScatterStats = f.toString().includes('import { SampleScatterStats  } from "./SampleScatterStats ";');
-            var isSampleCategoryData = f.toString().includes('import { SampleCategoryData } from "./SampleCategoryData";');
-            var isSamplePolarData = f.toString().includes('import { SamplePolarData } from "./SamplePolarData";');
-            var isSampleRadialData = f.toString().includes('import { SampleRadialData } from "./SampleRadialData";');
-            var isSampleRangeData = f.toString().includes('import { SampleRangeData } from "./SampleRangeData";');
-            var isSampleDensityData = f.toString().includes('import { SampleDensityData } from "./SampleDensityData";');
-            var isSampleShapeData  = f.toString().includes('import { SampleShapeData } from "./SampleShapeData";');
+            var isSampleFinancialData = readFile.includes('import { SampleFinancialData } from "./SampleFinancialData";');
+            var isSampleScatterData = readFile.includes('import { SampleScatterData } from "./SampleScatterData"');
+            var isSampleScatterStats = readFile.includes('import { SampleScatterStats } from "./SampleScatterStats";');
+            var isSampleCategoryData = readFile.includes('import { SampleCategoryData } from "./SampleCategoryData";');
+            var isSamplePolarData = readFile.includes('import { SamplePolarData } from "./SamplePolarData";');
+            var isSampleRadialData = readFile.includes('import { SampleRadialData } from "./SampleRadialData";');
+            var isSampleRangeData = readFile.includes('import { SampleRangeData } from "./SampleRangeData";');
+            var isSampleDensityData = readFile.includes('import { SampleDensityData } from "./SampleDensityData";');
+            var isSampleShapeData  = readFile.includes('import { SampleShapeData } from "./SampleShapeData";');
             //grid
-            var isFinancialData  = f.toString().includes("import { FinancialData } from './FinancialData'");
-            var isTaskUtil  = f.toString().includes('import { TaskUtil } from "../../utilities/TaskUtil";');
-            var isOData = f.toString().includes("import './odatajs-4.0.0';");
-            var isPager = f.toString().includes("import { Pager } from './pager/Pager';");
+            var isFinancialData  = readFile.includes("import { FinancialData } from './FinancialData'");
+            var isTaskUtil  = readFile.includes('import { TaskUtil } from "../../utilities/TaskUtil";');
+            var isOData = readFile.includes("import './odatajs-4.0.0';");
+            var isPager = readFile.includes("import { Pager } from './pager/Pager';");
             //excel
-            var isExcelUtility  = f.toString().includes('import { ExcelUtility } from "./ExcelUtility";');
+            var isExcelUtility  = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
             //financialchart
-            var isStocksUtility  = f.toString().includes('import { StocksUtility } from "./StocksUtility";');
-            var isStocksHistory  = f.toString().includes('import { StocksHistory } from "./StocksHistory";');
+            var isStocksUtility  = readFile.includes('import { StocksUtility } from "./StocksUtility";');
+            var isStocksHistory  = readFile.includes('import { StocksHistory } from "./StocksHistory";');
             //geomap
-            var isGeoMapStyles  = f.toString().includes('import { GeoMapStyles } from "./GeoMapStyles";');
-            var isGeoMapPanel  = f.toString().includes('import { GeoMapPanel } from "./GeoMapPanel";');
-            var isDataUtils  = f.toString().includes('import DataUtils from "../../utilities/DataUtils";');
-            var isWorldUtils  = f.toString().includes('import isWorldUtils from "../../utilities/isWorldUtils";');
-            var isWorldConnections  = f.toString().includes('import isWorldConnections from "../../utilities/isWorldConnections";');
-            var isMapUtils  = f.toString().includes('import { MapUtils } from "./MapUtils";');
-            var isEsriUtility  = f.toString().includes('import { EsriUtility } from "./EsriUtility";');
-            var isLegendItem  = f.toString().includes('import LegendItem from "../../components/LegendItem";');
-            var isLegendOverlay  = f.toString().includes('import LegendOverlay from "../../components/LegendOverlay";');
+            var isGeoMapStyles  = readFile.includes('import { GeoMapStyles } from "./GeoMapStyles";');
+            var isGeoMapPanel  = readFile.includes('import { GeoMapPanel } from "./GeoMapPanel";');
+            var isDataUtils  = readFile.includes('import DataUtils from "../../utilities/DataUtils";');
+            var isWorldUtils  = readFile.includes('import isWorldUtils from "../../utilities/isWorldUtils";');
+            var isWorldConnections  = readFile.includes('import isWorldConnections from "../../utilities/isWorldConnections";');
+            var isMapUtils  = readFile.includes('import { MapUtils } from "./MapUtils";');
+            var isEsriUtility  = readFile.includes('import { EsriUtility } from "./EsriUtility";');
+            var isLegendItem  = readFile.includes('import LegendItem from "../../components/LegendItem";');
+            var isLegendOverlay  = readFile.includes('import LegendOverlay from "../../components/LegendOverlay";');
 
             //sparkline
-            var isProducts = f.toString().includes("import { Products } from '../../utilities/Products';");
+            var isProducts = readFile.includes("import { Products } from '../../utilities/Products';");
             //spreadsheet
             //treemap
-            var isSampleTreeMapData = f.toString().includes('import { SampleTreeMapData } from "../tree-map/WorldPopData";');            
+            var isSampleTreeMapData = readFile.includes('import { SampleTreeMapData } from "../tree-map/WorldPopData";');            
 
             var getResources = path.join(file.dirname, "../");
             var original = path.basename(getResources);
@@ -214,6 +237,10 @@ function scripts(cb) {
             //DataChart
             if(isSampleFinancialData == true) {
                 gulp.src("./src/samples/" + original + "/" + "SampleFinancialData.tsx")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            } 
+            if(isSampleScatterData == true) {
+                gulp.src("./src/samples/" + original + "/" + "SampleScatterData.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             } 
             if(isSampleScatterStats == true) {
@@ -347,6 +374,9 @@ function scripts(cb) {
             var currTemplate = templateFiles[i];
             var newContent = currTemplate.content.replace(/@@SampleName/gm, sampleName);
             newContent = newContent.replace(/@@Dependencies/gm, packageString);
+            var ind = currTemplate.name.lastIndexOf("\\");
+            var pathPath = currTemplate.name.substr(0, ind);
+            fs.mkdirSync(file.dirname + "/" + pathPath, {recursive: true});
             fs.writeFileSync(file.dirname + "/" + currTemplate.name, newContent);
         }
         cb();
@@ -354,9 +384,18 @@ function scripts(cb) {
     cb();
 }
 
+function readMeScripts(cb) {
+    gulp.src(scriptsPath + "**/README.md")  
+    .pipe(es.map(function(file, cb) {
+    }));
+    cb();
+}
+
 //Create Scripts per component
 exports.scripts = gulp.series(getTemplates, scripts);
+exports.readMeScripts = gulp.series(readMeScripts);
 exports.default = gulp.series(pack, scripts);
 exports.all = gulp.series(pack,
      getTemplates,     
-     scripts);
+     scripts,
+     readMeScripts);
