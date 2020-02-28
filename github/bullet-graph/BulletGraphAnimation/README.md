@@ -11,3 +11,38 @@
             </a>
             </blockquote>
         
+        <table>
+  <tr>
+    <th>
+      Text 1
+    </th>
+    <th>
+      Text 2
+    </th>
+    <th>
+      Text 3
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Text 1
+    </td>
+    <td>
+      Text 2
+    </td>
+    <td>
+      Text 3
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Text 1
+    </td>
+    <td>
+      Text 2
+    </td>
+    <td>
+      Text 3
+    </td>
+  </tr>
+</table>
