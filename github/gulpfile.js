@@ -189,6 +189,7 @@ function scripts(cb) {
             var isOData = readFile.includes("import './odatajs-4.0.0';");
             var isPager = readFile.includes("import { Pager } from './pager/Pager';");
             //excel
+            var isExcelUtilityLocal = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
             var isExcelUtility  = readFile.includes('import { ExcelUtility } from "../excel-library/ExcelUtility";');
             var isExcelUtility2  = readFile.includes("import { ExcelUtility } from '../excel-library/ExcelUtility';");
             //financialchart
@@ -290,6 +291,11 @@ function scripts(cb) {
                 .pipe(gulp.dest(file.dirname + "/src/"))
             }   
             //Excel
+            isExcelUtilityLocal
+            if(isExcelUtilityLocal == true) {
+                gulp.src("./src/samples/excel-library" + "/" + "ExcelUtility.tsx")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            }  
             if(isExcelUtility == true) {
                 gulp.src("./src/samples/excel-library" + "/" + "ExcelUtility.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
