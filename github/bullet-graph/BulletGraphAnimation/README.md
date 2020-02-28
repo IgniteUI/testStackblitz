@@ -1,4 +1,4 @@
- #View on Code and Box#
+ ## View on Code and Box
 [Run this sample](https://codesandbox.io/embed/github/IgniteUI/testStackblitz/tree/master/github/bullet-graph/BulletGraphAnimation?fontsize=14&hidenavigation=1&theme=dark&view=preview)                        
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
