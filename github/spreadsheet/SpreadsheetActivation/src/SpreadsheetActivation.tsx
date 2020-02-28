@@ -11,7 +11,7 @@ import { IgrSpreadsheetModule } from 'igniteui-react-spreadsheet';
 import { IgrSpreadsheet } from 'igniteui-react-spreadsheet';
 import { SpreadsheetCell } from 'igniteui-react-spreadsheet';
 import { IgrSpreadsheetActiveCellChangedEventArgs } from 'igniteui-react-spreadsheet';
-import { ExcelUtility } from "../excel-library/ExcelUtility";
+import { ExcelUtility } from "./ExcelUtility";
 
 import { SharedComponent } from "./SharedComponent";
 

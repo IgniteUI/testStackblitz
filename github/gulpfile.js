@@ -189,7 +189,8 @@ function scripts(cb) {
             var isOData = readFile.includes("import './odatajs-4.0.0';");
             var isPager = readFile.includes("import { Pager } from './pager/Pager';");
             //excel
-            var isExcelUtility  = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
+            var isExcelUtility  = readFile.includes('import { ExcelUtility } from "../excel-library/ExcelUtility";');
+            var isExcelUtility2  = readFile.includes("import { ExcelUtility } from '../excel-library/ExcelUtility';");
             //financialchart
             var isStocksUtility  = readFile.includes('import { StocksUtility } from "./StocksUtility";');
             var isStocksHistory  = readFile.includes('import { StocksHistory } from "./StocksHistory";');
@@ -293,6 +294,10 @@ function scripts(cb) {
                 gulp.src("./src/samples/excel-library" + "/" + "ExcelUtility.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             }  
+            if(isExcelUtility2 == true) {
+                gulp.src("./src/samples/excel-library" + "/" + "ExcelUtility.tsx")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            }  
             //Financial Chart
             if(isStocksUtility == true) {
                 gulp.src("./src/samples/" + original + "/" + "StocksUtility.tsx")
@@ -359,6 +364,7 @@ function scripts(cb) {
             .pipe(replace("../tree-map/", "./"))
             .pipe(replace('../../utilities/', './'))
             .pipe(replace('../../excel-library/', './'))
+            .pipe(replace('../excel-library/', './') )
             .pipe(replace('../../components/', './'))
             .pipe(replace('../../', './'))
             .pipe(gulp.dest(sampleDest))
