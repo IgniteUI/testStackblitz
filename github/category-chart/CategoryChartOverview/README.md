@@ -1,11 +1,13 @@
 
             <div>
-            <iframe
-            src="{{file.dirname + file.basename + //}}?fontsize=14&hidenavigation=1&theme=dark&view=preview"
-            style="width:50%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-            title="my-code-box-test"            
-            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-        ></iframe>
-
-            </div>
+            <h1>View on Codes And Box </h1><br/>
+            <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/testStackblitz/tree/master/github/category-chart/CategoryChartOverview?fontsize=14&hidenavigation=1&theme=dark&view=preview">
+            <img alt="Edit fbusv" src="https://codesandbox.io/static/img/play-codesandbox.svg"/>
+            </a>
+            <br/>
+            <h1>View on Codes and Box with Editor</h1>
+            <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/testStackblitz/tree/master/github/bullet-graph/BulletGraphAnimation?fontsize=14&hidenavigation=1&theme=dark&view=preview">
+            <img alt="Edit fbusv" src="https://codesandbox.io/static/img/play-codesandbox.svg"/>
+            </a>
+            </div> 
         
