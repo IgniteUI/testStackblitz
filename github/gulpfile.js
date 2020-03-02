@@ -51,7 +51,7 @@ function pack() {
     .pipe(es.map(function(file, cb) {
         var manifest = `
         {     
-            "additionalDependencies": "@@AddDependencies",       
+            "additionalDependencies": "${addDependencies}",       
             "sampleName": "${file.basename.replace('.tsx', '')}"             
         }
         `;       
@@ -117,6 +117,7 @@ var packageMap = [
     { name: "Sparkline", package: "igniteui-react-charts"},
     //Check if Excel, Chart Adapter is used
     { name: "Spreadsheet", package: "igniteui-react-spreadsheet"},
+    { name: "ChartAdapter", package: "igniteui-react-spreadsheet-chart-adapter"},
     { name: "TreeMap", package: "igniteui-react-charts"},
     { name: "ZoomSlider", package: "igniteui-react-charts"},
 ]
@@ -151,14 +152,8 @@ function scripts(cb) {
         var manifest = JSON.parse(manifestContent.toString());
         var sampleName = manifest.sampleName;
         var dependencies = manifest.additionalDependencies;
-        var packageNames = getPackageNames(dependencies, sampleName);
-        var packageString = `"igniteui-react-core":` + packageVersion + `,
-        `;
-        for (var i = 0; i< packageNames.length; i++) {
-            packageString += `"${packageNames[i]}":` + packageVersion +  `,
-            `
-        }
-
+        
+        
         //Move Sample file to src folder
         var sampleRootName = sampleName + '.tsx';
         var sampleFile = file.dirname + '\\' + sampleRootName;
@@ -174,12 +169,12 @@ function scripts(cb) {
 
             var isChartAdapterPackage = readFile.includes("import { IgrSpreadsheetChartAdapterModule } from 'igniteui-react-spreadsheet-chart-adapter';");       
             if(isChartAdapterPackage == true) {
-                addDependencies.push("igniteui-react-spreadsheet-chart-adapter:" + packageVersion);
+                addDependencies.push('"igniteui-react-spreadsheet-chart-adapter":' + packageVersion);
             }
-            var isExcelPackage = readFile.includes("import { IgrExcelModule } from 'igniteui-react-excel';");       
-            if(isExcelPackage == true) {
-                addDependencies.push("igniteui-react-excel:" + packageVersion);
-            }
+            // var isExcelPackage = readFile.includes("import { IgrExcelModule } from 'igniteui-react-excel';");       
+            // if(isExcelPackage == true) {
+            //     addDependencies.push('"igniteui-react-excel":' + packageVersion);
+            // }
 
             //general
             var isStylesCssContent = readFile.includes('import "../styles.css";');
@@ -409,9 +404,24 @@ function scripts(cb) {
         }
         cb();    
 
-        //put addDependencies into manifest         
-        m.replace("@@AddDependencies", addDependencies.name);
-        console.log(addDependencies);
+        
+
+        //Add Common Dependency
+        var packageNames = getPackageNames(dependencies, sampleName);
+        var packageString = `"igniteui-react-core":` + packageVersion + `,
+        `;
+
+        for (var i = 0; i < addDependencies.length; i++) {
+            var currDependency = addDependencies[i];
+            dependencies = currDependency;          
+        }
+        //Add Additional Dependencies
+        for (var i = 0; i< packageNames.length; i++) {
+            console.log(dependencies);
+            packageString += `"${packageNames[i]}":` + packageVersion + `,
+            ` + dependencies;
+        }
+
         //Parse template files. Update build flags
         for (var i = 0; i < templateFiles.length; i++) {
             
