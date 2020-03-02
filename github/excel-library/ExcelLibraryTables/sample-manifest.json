@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "ExcelLibraryTables"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "ExcelLibraryTables"             
         }
         

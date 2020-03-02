@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeRadialLineSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeRadialLineSeries"             
         }
         

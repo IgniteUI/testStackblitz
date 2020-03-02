@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridColumnResizing"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridColumnResizing"             
         }
         

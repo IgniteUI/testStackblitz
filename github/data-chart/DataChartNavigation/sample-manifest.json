@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartNavigation"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartNavigation"             
         }
         

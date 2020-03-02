@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "ExcelLibraryCharts"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "ExcelLibraryCharts"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapDisplayImageryOSM"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapDisplayImageryOSM"             
         }
         

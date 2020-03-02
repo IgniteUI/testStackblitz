@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "FinancialChartMultipleFeeds"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "FinancialChartMultipleFeeds"             
         }
         

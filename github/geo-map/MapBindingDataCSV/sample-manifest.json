@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapBindingDataCSV"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapBindingDataCSV"             
         }
         

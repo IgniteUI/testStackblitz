@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartSeriesHighlighting"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartSeriesHighlighting"             
         }
         

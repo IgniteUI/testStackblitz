@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "RadialGaugeTypeHalf"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "RadialGaugeTypeHalf"             
         }
         

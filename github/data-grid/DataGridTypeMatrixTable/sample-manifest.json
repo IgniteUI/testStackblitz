@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridTypeMatrixTable"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridTypeMatrixTable"             
         }
         

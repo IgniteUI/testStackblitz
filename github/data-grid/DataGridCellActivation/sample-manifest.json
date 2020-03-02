@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridCellActivation"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridCellActivation"             
         }
         

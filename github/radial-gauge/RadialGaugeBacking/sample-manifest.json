@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "RadialGaugeBacking"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "RadialGaugeBacking"             
         }
         

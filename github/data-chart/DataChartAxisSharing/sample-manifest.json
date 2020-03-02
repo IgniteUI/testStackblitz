@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartAxisSharing"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartAxisSharing"             
         }
         

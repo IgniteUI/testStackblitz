@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "SparklineDisplayArea"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "SparklineDisplayArea"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "ExcelLibrarySparklines"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "ExcelLibrarySparklines"             
         }
         

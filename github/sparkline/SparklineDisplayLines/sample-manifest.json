@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "SparklineDisplayLines"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "SparklineDisplayLines"             
         }
         

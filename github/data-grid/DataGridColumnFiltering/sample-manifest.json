@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridColumnFiltering"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridColumnFiltering"             
         }
         

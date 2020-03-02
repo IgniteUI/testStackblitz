@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeCategoryPointSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeCategoryPointSeries"             
         }
         

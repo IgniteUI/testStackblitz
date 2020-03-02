@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeScatterBubbleSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeScatterBubbleSeries"             
         }
         

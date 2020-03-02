@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "CategoryChartTooltipTemplate"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "CategoryChartTooltipTemplate"             
         }
         

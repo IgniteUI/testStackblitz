@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeCategorySplineSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeCategorySplineSeries"             
         }
         

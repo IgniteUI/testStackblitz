@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "RadialGaugeTypeSegmented"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "RadialGaugeTypeSegmented"             
         }
         

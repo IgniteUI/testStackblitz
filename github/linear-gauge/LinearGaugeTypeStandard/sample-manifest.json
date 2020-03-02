@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeStandard"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeStandard"             
         }
         

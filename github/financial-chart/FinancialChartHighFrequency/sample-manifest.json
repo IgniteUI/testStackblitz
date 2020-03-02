@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "FinancialChartHighFrequency"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "FinancialChartHighFrequency"             
         }
         

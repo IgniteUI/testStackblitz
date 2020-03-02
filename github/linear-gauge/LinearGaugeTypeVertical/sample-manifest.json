@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeVertical"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeVertical"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeScale"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeScale"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypePolarAreaSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypePolarAreaSeries"             
         }
         

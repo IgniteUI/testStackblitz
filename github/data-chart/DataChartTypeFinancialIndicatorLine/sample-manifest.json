@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeFinancialIndicatorLine"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeFinancialIndicatorLine"             
         }
         

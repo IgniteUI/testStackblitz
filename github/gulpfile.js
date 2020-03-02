@@ -169,7 +169,7 @@ function scripts(cb) {
 
             var isChartAdapterPackage = readFile.includes("import { IgrSpreadsheetChartAdapterModule } from 'igniteui-react-spreadsheet-chart-adapter';");       
             if(isChartAdapterPackage == true) {
-                addDependencies.push('"igniteui-react-spreadsheet-chart-adapter":' + packageVersion);
+                addDependencies.push('"igniteui-react-spreadsheet-chart-adapter":' + packageVersion + ",");
             }
             // var isExcelPackage = readFile.includes("import { IgrExcelModule } from 'igniteui-react-excel';");       
             // if(isExcelPackage == true) {
@@ -193,10 +193,12 @@ function scripts(cb) {
             var isSampleDensityData = readFile.includes('import { SampleDensityData } from "./SampleDensityData";');
             var isSampleShapeData  = readFile.includes('import { SampleShapeData } from "./SampleShapeData";');
             //grid
-            var isFinancialData  = readFile.includes("import { FinancialData } from './FinancialData'");
+            var isFinancialData  = readFile.includes('import { FinancialData } from "./FinancialData"');
             var isTaskUtil  = readFile.includes('import { TaskUtil } from "../../utilities/TaskUtil";');
+            var isTaskUtil2 = readFile.includes('import { TaskUtil } from "./TaskUtil";')
             var isOData = readFile.includes("import './odatajs-4.0.0';");
             var isPager = readFile.includes("import { Pager } from './pager/Pager';");
+            var isFlags =  readFile.includes('./flags/');
             //excel
             var isExcelUtilityLocal = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
             var isExcelUtility  = readFile.includes('import { ExcelUtility } from "../excel-library/ExcelUtility";');
@@ -294,6 +296,10 @@ function scripts(cb) {
                 gulp.src("./src/utilities" + "/" + "TaskUtil.ts")
                 .pipe(gulp.dest(file.dirname + "/src"))
             } 
+            if(isTaskUtil2 == true) {
+                gulp.src("./src/utilities" + "/" + "TaskUtil.ts")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            } 
             if(isOData == true) {
                 gulp.src("./src/samples/" + original + "/odatajs-4.0.0.js")
                 .pipe(gulp.dest(file.dirname + "/src"))
@@ -301,7 +307,11 @@ function scripts(cb) {
             if(isPager == true) {
                 gulp.src("./src/samples/" + original + "/pager/" + "Pager.tsx")
                 .pipe(gulp.dest(file.dirname + "/src/"))
-            }   
+            }  
+            if(isFlags == true) {
+                gulp.src("./src/samples/" + original + "/flags/**")
+                .pipe(gulp.dest(file.dirname + "/src/" + "/flags"))
+            } 
             //Excel
             isExcelUtilityLocal
             if(isExcelUtilityLocal == true) {
@@ -403,8 +413,6 @@ function scripts(cb) {
             });
         }
         cb();    
-
-        
 
         //Add Common Dependency
         var packageNames = getPackageNames(dependencies, sampleName);

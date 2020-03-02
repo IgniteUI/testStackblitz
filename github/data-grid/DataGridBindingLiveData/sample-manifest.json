@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridBindingLiveData"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridBindingLiveData"             
         }
         

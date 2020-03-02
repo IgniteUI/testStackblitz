@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapImagerySources"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapImagerySources"             
         }
         

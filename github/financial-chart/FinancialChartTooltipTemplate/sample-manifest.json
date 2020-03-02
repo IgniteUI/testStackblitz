@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "FinancialChartTooltipTemplate"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "FinancialChartTooltipTemplate"             
         }
         

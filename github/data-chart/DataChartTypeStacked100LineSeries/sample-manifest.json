@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeStacked100LineSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeStacked100LineSeries"             
         }
         

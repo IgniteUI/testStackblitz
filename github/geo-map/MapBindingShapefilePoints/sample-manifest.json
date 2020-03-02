@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapBindingShapefilePoints"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapBindingShapefilePoints"             
         }
         

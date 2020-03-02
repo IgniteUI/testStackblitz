@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeFinancialCandlestickSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeFinancialCandlestickSeries"             
         }
         

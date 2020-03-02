@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapTypeScatterPolygonSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapTypeScatterPolygonSeries"             
         }
         

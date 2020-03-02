@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapDisplayImageryHeatTiles"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapDisplayImageryHeatTiles"             
         }
         

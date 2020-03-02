@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeMultiScale"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeMultiScale"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartSynchronization"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartSynchronization"             
         }
         

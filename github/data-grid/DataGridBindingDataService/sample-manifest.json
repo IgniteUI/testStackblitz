@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridBindingDataService"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridBindingDataService"             
         }
         

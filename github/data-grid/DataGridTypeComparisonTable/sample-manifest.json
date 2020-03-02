@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridTypeComparisonTable"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridTypeComparisonTable"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeCategoryBarSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeCategoryBarSeries"             
         }
         

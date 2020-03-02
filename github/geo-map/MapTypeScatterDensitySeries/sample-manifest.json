@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "MapTypeScatterDensitySeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "MapTypeScatterDensitySeries"             
         }
         

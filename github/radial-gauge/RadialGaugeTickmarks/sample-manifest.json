@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "RadialGaugeTickmarks"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "RadialGaugeTickmarks"             
         }
         

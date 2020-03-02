@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DoughnutChartLegend"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DoughnutChartLegend"             
         }
         

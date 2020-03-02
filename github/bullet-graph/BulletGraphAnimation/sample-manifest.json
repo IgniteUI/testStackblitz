@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "BulletGraphAnimation"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "BulletGraphAnimation"             
         }
         

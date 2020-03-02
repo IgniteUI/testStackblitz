@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridColumnScrolling"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridColumnScrolling"             
         }
         

@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataGridPerformance"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataGridPerformance"             
         }
         

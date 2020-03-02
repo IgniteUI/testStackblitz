@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeMultiRange"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeMultiRange"             
         }
         

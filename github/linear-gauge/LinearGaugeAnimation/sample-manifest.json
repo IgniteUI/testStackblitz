@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeAnimation"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeAnimation"             
         }
         

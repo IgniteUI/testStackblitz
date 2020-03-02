@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeCategoryStepLineSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeCategoryStepLineSeries"             
         }
         

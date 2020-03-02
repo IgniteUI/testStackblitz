@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "DataChartTypeRangeSeries"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "DataChartTypeRangeSeries"             
         }
         

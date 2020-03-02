@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeNeedle"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeNeedle"             
         }
         

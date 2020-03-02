@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeCurve"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeCurve"             
         }
         

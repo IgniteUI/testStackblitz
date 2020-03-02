@@ -1,5 +1,6 @@
 
-        {
-            "sampleName": "LinearGaugeTypeSegmented"   
+        {     
+            "additionalDependencies": "",       
+            "sampleName": "LinearGaugeTypeSegmented"             
         }
         
