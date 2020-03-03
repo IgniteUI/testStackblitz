@@ -106,6 +106,7 @@ var packageMap = [
     { name: "CategoryChart", package: `"igniteui-react-charts"`},
     { name: "DataChart", package: `"igniteui-react-charts"` },
     { name: "DataGrid", package: `"igniteui-react-grids"`},
+    { name: "DataGridBindingRemoteData", package: `"igniteui-react-datasources"`},
     { name: "DataGridBindingLiveData", package: `"igniteui-react-charts"`},
     { name: "DoughnutChart", package: `"igniteui-react-charts"`},
     //Check if Spreadsheet is used
