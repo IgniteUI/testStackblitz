@@ -193,6 +193,7 @@ function scripts(cb) {
             var isSampleShapeData  = readFile.includes('import { SampleShapeData } from "./SampleShapeData";');
             //grid
             var isFinancialData  = readFile.includes('import { FinancialData } from "./FinancialData"');
+            var isFinancialData2  = readFile.includes('import { FinancialData } from "./FinancialData"');
             var isTaskUtil  = readFile.includes('import { TaskUtil } from "../../utilities/TaskUtil";');
             var isTaskUtil2 = readFile.includes('import { TaskUtil } from "./TaskUtil";')
             var isOData = readFile.includes("import './odatajs-4.0.0';");
@@ -208,6 +209,7 @@ function scripts(cb) {
             var isStocksUtility  = readFile.includes('import { StocksUtility } from "./StocksUtility";');
             var isStocksHistory  = readFile.includes('import { StocksHistory } from "./StocksHistory";');
             //geomap
+            var isShape = readFile.includes('/shapes/');
             var isMapBindingDataCSV = readFile.includes("import MapBindingDataCSV from './MapBindingDataCSV';")
             var isGeoMapStyles  = readFile.includes('import "./GeoMapStyles.css"');
             var isGeoMapPanel  = readFile.includes('import { GeoMapPanel } from "./GeoMapPanel";');
@@ -299,6 +301,10 @@ function scripts(cb) {
                 gulp.src("./src/samples/" + original + "/" + "FinancialData.ts")
                 .pipe(gulp.dest(file.dirname + "/src"))
             }  
+            if(isFinancialData2 == true) {
+                gulp.src("./src/samples/" + original + "/" + "FinancialData.ts")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            }  
             if(isTaskUtil == true) {
                 gulp.src("./src/utilities" + "/" + "TaskUtil.ts")
                 .pipe(gulp.dest(file.dirname + "/src"))
@@ -320,7 +326,7 @@ function scripts(cb) {
                 .pipe(gulp.dest(file.dirname + "/src" + "/flags"))
             }  
             if(isFlagsX == true) {
-                gulp.src("./src/samples/data-grid/flags/flags.tsx")
+                gulp.src("./src/samples/data-grid/flags/flags.ts")
                 .pipe(gulp.dest(file.dirname + "/src"))
             } 
             //Excel
@@ -351,6 +357,10 @@ function scripts(cb) {
                 .pipe(gulp.dest(file.dirname + "/src"))
             }  
             //GeoMap
+            if(isShape == true) {
+                gulp.src("./public/Shapes/**")
+                .pipe(gulp.dest(file.dirname + "/src" + "/Shapes"))
+            }
             if(isMapBindingDataCSV  == true) {
                 gulp.src("./src/samples/" + original + "/" + "isMapBindingDataCSV.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
