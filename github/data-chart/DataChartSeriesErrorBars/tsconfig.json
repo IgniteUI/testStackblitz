@@ -24,9 +24,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "strict": false,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "strict": false
   },
   "exclude": [
     "node_modules",

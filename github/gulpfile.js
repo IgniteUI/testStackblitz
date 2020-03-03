@@ -51,7 +51,7 @@ function pack() {
     .pipe(es.map(function(file, cb) {
         var manifest = `
         {     
-            "additionalDependencies": "${addDependencies}",       
+            "additionalDependencies": "",       
             "sampleName": "${file.basename.replace('.tsx', '')}"             
         }
         `;       
@@ -102,24 +102,28 @@ exports.getTemplates = getTemplates;
 
 //Inject packages for package.json
 var packageMap = [
-    { name: "BulletGraph", package: "igniteui-react-gauges" },
-    { name: "CategoryChart", package: "igniteui-react-charts"},
-    { name: "DataChart", package: "igniteui-react-charts" },
-    { name: "DataGrid", package: "igniteui-react-grids"},
-    { name: "DoughnutChart", package: "igniteui-react-charts"},
+    { name: "BulletGraph", package: `"igniteui-react-gauges"` },
+    { name: "CategoryChart", package: `"igniteui-react-charts"`},
+    { name: "DataChart", package: `"igniteui-react-charts"` },
+    { name: "DataGrid", package: `"igniteui-react-grids"`},
+    { name: "DataGridBindingLiveData", package: `"igniteui-react-charts"`},
+    { name: "DoughnutChart", package: `"igniteui-react-charts"`},
     //Check if Spreadsheet is used
-    { name: "ExcelLibrary", package: "igniteui-react-excel"},
-    { name: "FinancialChart", package: "igniteui-react-charts"},
-    { name: "Map", package: "igniteui-react-maps"},
-    { name: "LinearGauge", package: "igniteui-react-gauges"},
-    { name: "PieChart", package: "igniteui-react-charts"},
-    { name: "RadialGauge", package: "igniteui-react-charts"},
-    { name: "Sparkline", package: "igniteui-react-charts"},
+    { name: "ExcelLibrary", package: `"igniteui-react-excel"`},
+    { name: "FinancialChart", package: `"igniteui-react-charts"`},
+    //Check if Chart is used
+    { name: "Map", package: `"igniteui-react-maps"`+ `:` + packageVersion + `,
+    ` + `"igniteui-react-chart"`},   
+    { name: "LinearGauge", package: `"igniteui-react-gauges"`},
+    { name: "PieChart", package: `"igniteui-react-charts"`},
+    { name: "RadialGauge", package: `"igniteui-react-gauges"`},
+    { name: "Sparkline", package: `"igniteui-react-charts"`},
     //Check if Excel, Chart Adapter is used
-    { name: "Spreadsheet", package: "igniteui-react-spreadsheet"},
-    { name: "ChartAdapter", package: "igniteui-react-spreadsheet-chart-adapter"},
-    { name: "TreeMap", package: "igniteui-react-charts"},
-    { name: "ZoomSlider", package: "igniteui-react-charts"},
+    { name: "Spreadsheet", package: `"igniteui-react-spreadsheet"` + `:` + packageVersion + `,
+    ` + `"igniteui-react-excel"`},   
+    { name: "SpreadsheetAdapter", package: `"igniteui-react-spreadsheet-chart-adapter"`},
+    { name: "TreeMap", package: `"igniteui-react-charts"`},
+    { name: "ZoomSlider", package: `"igniteui-react-charts"`},
 ]
 
 function getPackageNames(additionalDependencies, fileName) {
@@ -152,7 +156,7 @@ function scripts(cb) {
         var manifest = JSON.parse(manifestContent.toString());
         var sampleName = manifest.sampleName;
         var dependencies = manifest.additionalDependencies;
-        
+        //console.log(dependencies);
         
         //Move Sample file to src folder
         var sampleRootName = sampleName + '.tsx';
@@ -167,15 +171,6 @@ function scripts(cb) {
 
             var readFile = f.toString();
 
-            var isChartAdapterPackage = readFile.includes("import { IgrSpreadsheetChartAdapterModule } from 'igniteui-react-spreadsheet-chart-adapter';");       
-            if(isChartAdapterPackage == true) {
-                addDependencies.push('"igniteui-react-spreadsheet-chart-adapter":' + packageVersion + ",");
-            }
-            // var isExcelPackage = readFile.includes("import { IgrExcelModule } from 'igniteui-react-excel';");       
-            // if(isExcelPackage == true) {
-            //     addDependencies.push('"igniteui-react-excel":' + packageVersion);
-            // }
-
             //general
             var isStylesCssContent = readFile.includes('import "../styles.css";');
             var isSharedStylesCssContent = readFile.includes('import "./SharedStyles.css";');
@@ -186,6 +181,7 @@ function scripts(cb) {
             var isSampleFinancialData = readFile.includes('import { SampleFinancialData } from "./SampleFinancialData";');
             var isSampleScatterData = readFile.includes('import { SampleScatterData } from "./SampleScatterData"');
             var isSampleScatterStats = readFile.includes('import { SampleScatterStats } from "./SampleScatterStats";');
+            var isSampleScatterStats2 = readFile.includes('import { SampleScatterStats } from "../data-chart/SampleScatterStats";');
             var isSampleCategoryData = readFile.includes('import { SampleCategoryData } from "./SampleCategoryData";');
             var isSamplePolarData = readFile.includes('import { SamplePolarData } from "./SamplePolarData";');
             var isSampleRadialData = readFile.includes('import { SampleRadialData } from "./SampleRadialData";');
@@ -198,7 +194,7 @@ function scripts(cb) {
             var isTaskUtil2 = readFile.includes('import { TaskUtil } from "./TaskUtil";')
             var isOData = readFile.includes("import './odatajs-4.0.0';");
             var isPager = readFile.includes("import { Pager } from './pager/Pager';");
-            var isFlags =  readFile.includes('./flags/');
+            
             //excel
             var isExcelUtilityLocal = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
             var isExcelUtility  = readFile.includes('import { ExcelUtility } from "../excel-library/ExcelUtility";');
@@ -263,6 +259,10 @@ function scripts(cb) {
                 gulp.src("./src/samples/" + original + "/" + "SampleScatterStats.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             } 
+            if(isSampleScatterStats2 == true) {
+                gulp.src("./src/samples/data-chart" + "/" + "SampleScatterStats.tsx")
+                .pipe(gulp.dest(file.dirname + "/src"))
+            }
             if(isSampleCategoryData == true) {
                 gulp.src("./src/samples/" + original + "/" + "SampleCategoryData.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
@@ -308,10 +308,6 @@ function scripts(cb) {
                 gulp.src("./src/samples/" + original + "/pager/" + "Pager.tsx")
                 .pipe(gulp.dest(file.dirname + "/src/"))
             }  
-            if(isFlags == true) {
-                gulp.src("./src/samples/" + original + "/flags/**")
-                .pipe(gulp.dest(file.dirname + "/src/" + "/flags"))
-            } 
             //Excel
             isExcelUtilityLocal
             if(isExcelUtilityLocal == true) {
@@ -402,6 +398,7 @@ function scripts(cb) {
             gulp.src(sampleFile)            
             .pipe(replace("./pager/", "./"))
             .pipe(replace("../tree-map/", "./"))
+            .pipe(replace("../data-chart/", "./"))
             .pipe(replace('../../utilities/', './'))
             .pipe(replace('../../excel-library/', './'))
             .pipe(replace('../excel-library/', './') )
@@ -414,20 +411,26 @@ function scripts(cb) {
         }
         cb();    
 
+        //TODO Update Manifest to additional dependencies
+        // for (var i = 0; i < addDependencies.length; i++) {
+        //     var currDependency = addDependencies[i];
+        //     dependencies = currDependency; 
+        //     var newContent = currDependency.content.replace(/additionalDependencies/gm, currDependency.toString());
+        //     console.log(addDependencies);
+        //     fs.writeFileSync(scriptsPath + "**/sample-manifest.json", newContent);
+        // }
+
         //Add Common Dependency
         var packageNames = getPackageNames(dependencies, sampleName);
         var packageString = `"igniteui-react-core":` + packageVersion + `,
         `;
 
-        for (var i = 0; i < addDependencies.length; i++) {
-            var currDependency = addDependencies[i];
-            dependencies = currDependency;          
-        }
+        
         //Add Additional Dependencies
         for (var i = 0; i< packageNames.length; i++) {
-            console.log(dependencies);
-            packageString += `"${packageNames[i]}":` + packageVersion + `,
-            ` + dependencies;
+            //console.log(dependencies);
+            packageString += `${packageNames[i]}` + dependencies + `:` + packageVersion +`,
+            `;
         }
 
         //Parse template files. Update build flags
