@@ -110,10 +110,11 @@ var packageMap = [
     { name: "DoughnutChart", package: `"igniteui-react-charts"`},
     //Check if Spreadsheet is used
     { name: "ExcelLibrary", package: `"igniteui-react-excel"`},
+    { name: "ExcelLibrarySparklines", package: `"igniteui-react-grids"`},
     { name: "FinancialChart", package: `"igniteui-react-charts"`},
     //Check if Chart is used
     { name: "Map", package: `"igniteui-react-maps"`+ `:` + packageVersion + `,
-    ` + `"igniteui-react-chart"`},   
+    ` + `"igniteui-react-charts"`},   
     { name: "LinearGauge", package: `"igniteui-react-gauges"`},
     { name: "PieChart", package: `"igniteui-react-charts"`},
     { name: "RadialGauge", package: `"igniteui-react-gauges"`},
