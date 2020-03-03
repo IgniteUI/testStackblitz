@@ -214,6 +214,7 @@ function scripts(cb) {
             var isWorldUtils  = readFile.includes('import isWorldUtils from "../../utilities/isWorldUtils";');
             var isWorldUtils2 = readFile.includes('import WorldUtils from "../../utilities/WorldUtils"');
             var isWorldConnections  = readFile.includes('import isWorldConnections from "../../utilities/isWorldConnections";');
+            var isWorldConnections2 = readFile.includes('import WorldConnections from "./WorldConnections";');
             var isMapUtils  = readFile.includes('import { MapUtils } from "./MapUtils";');
             var isEsriUtility  = readFile.includes('import { EsriUtility } from "./EsriUtility";');
             var isLegendItem  = readFile.includes('import LegendItem from "../../components/LegendItem";');
@@ -314,7 +315,7 @@ function scripts(cb) {
             } 
             if(isFlags == true) {
                 gulp.src("./src/samples/data-grid/flags/**")
-                .pipe(gulp.dest(file.dirname + "/src" + "/flags"))
+                .pipe(gulp.dest(file.dirname + "/flags"))
             }  
             //Excel
             isExcelUtilityLocal
