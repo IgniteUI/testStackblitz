@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles.css";
 import './SharedStyles.css';
 import { SampleTreeMapData } from "./WorldPopData";
 import { IgrTreemapModule } from 'igniteui-react-charts';

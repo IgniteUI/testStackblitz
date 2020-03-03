@@ -119,7 +119,7 @@ var packageMap = [
     { name: "PieChart", package: `"igniteui-react-charts"`},
     { name: "RadialGauge", package: `"igniteui-react-gauges"`},
     { name: "Sparkline", package: `"igniteui-react-charts"`},
-    { name: "SparklineGrid", package: `"igniteui-react-grid"`},
+    { name: "SparklineGrid", package: `"igniteui-react-grids"`},
     //Check if Excel, Chart Adapter is used
     { name: "Spreadsheet", package: `"igniteui-react-spreadsheet"` + `:` + packageVersion + `,
     ` + `"igniteui-react-excel"`},   
@@ -196,11 +196,12 @@ function scripts(cb) {
             var isTaskUtil2 = readFile.includes('import { TaskUtil } from "./TaskUtil";')
             var isOData = readFile.includes("import './odatajs-4.0.0';");
             var isPager = readFile.includes("import { Pager } from './pager/Pager';");
-            
+            var isFlags = readFile.includes("'./flags/'");
             //excel
             var isExcelUtilityLocal = readFile.includes('import { ExcelUtility } from "./ExcelUtility";');
             var isExcelUtility  = readFile.includes('import { ExcelUtility } from "../excel-library/ExcelUtility";');
             var isExcelUtility2  = readFile.includes("import { ExcelUtility } from '../excel-library/ExcelUtility';");
+            var isExcelFile = readFile.includes("/ExcelFiles/");
             //financialchart
             var isStocksUtility  = readFile.includes('import { StocksUtility } from "./StocksUtility";');
             var isStocksHistory  = readFile.includes('import { StocksHistory } from "./StocksHistory";');
@@ -217,7 +218,8 @@ function scripts(cb) {
             var isEsriUtility  = readFile.includes('import { EsriUtility } from "./EsriUtility";');
             var isLegendItem  = readFile.includes('import LegendItem from "../../components/LegendItem";');
             var isLegendOverlay  = readFile.includes('import LegendOverlay from "../../components/LegendOverlay";');
-
+            var isData = readFile.includes('/Data/');
+            var isImages = readFile.includes('/images/');
             //sparkline
             var isProducts = readFile.includes("import { Products } from '../../utilities/Products';");
             //spreadsheet
@@ -309,6 +311,10 @@ function scripts(cb) {
             if(isPager == true) {
                 gulp.src("./src/samples/" + original + "/pager/" + "Pager.tsx")
                 .pipe(gulp.dest(file.dirname + "/src/"))
+            } 
+            if(isFlags == true) {
+                gulp.src("./src/samples/data-grid/flags/**")
+                .pipe(gulp.dest(file.dirname + "/src" + "/flags"))
             }  
             //Excel
             isExcelUtilityLocal
@@ -324,6 +330,10 @@ function scripts(cb) {
                 gulp.src("./src/samples/excel-library" + "/" + "ExcelUtility.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             }  
+            if(isExcelFile == true) {
+                gulp.src("./public/ExcelFiles/**")
+                .pipe(gulp.dest(file.dirname + "/src" + "/ExcelFiles"))
+            }
             //Financial Chart
             if(isStocksUtility == true) {
                 gulp.src("./src/samples/" + original + "/" + "StocksUtility.tsx")
@@ -382,6 +392,10 @@ function scripts(cb) {
                 gulp.src("/src/samples/components" + "/" + "LegendOverlay.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             }
+            if(isData == true) {
+                gulp.src("./public/Data/**")
+                .pipe(gulp.dest(file.dirname + "/src" + "/Data"))
+            }
             //Sparkline
             if(isProducts  == true) {
                 gulp.src("./src/utilities" + "/" + "Products.ts")
@@ -395,7 +409,11 @@ function scripts(cb) {
                 gulp.src("./src/samples/" + original + "/" + "WorldPopData.tsx")
                 .pipe(gulp.dest(file.dirname + "/src"))
             }
-
+            //Misc
+            if(isImages  == true) {
+                gulp.src("./public/images/**")
+                .pipe(gulp.dest(file.dirname + "/src" + "/images"))
+            }
             //move and delete sample
             gulp.src(sampleFile)            
             .pipe(replace("./pager/", "./"))
