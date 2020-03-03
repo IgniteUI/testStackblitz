@@ -118,7 +118,7 @@ var packageMap = [
     { name: "PieChart", package: `"igniteui-react-charts"`},
     { name: "RadialGauge", package: `"igniteui-react-gauges"`},
     { name: "Sparkline", package: `"igniteui-react-charts"`},
-    { name: "SparklineGrid", package: `"igniteui-react-Grid"`},
+    { name: "SparklineGrid", package: `"igniteui-react-grid"`},
     //Check if Excel, Chart Adapter is used
     { name: "Spreadsheet", package: `"igniteui-react-spreadsheet"` + `:` + packageVersion + `,
     ` + `"igniteui-react-excel"`},   
