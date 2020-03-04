@@ -20,6 +20,7 @@ import { IgrZoomSliderResolvingAxisValueEventArgs } from 'igniteui-react-charts'
 import { IgrRectChangedEventArgs } from 'igniteui-react-core';
 
 import { SampleScatterStats } from "./SampleScatterStats";
+import "../styles.css";
 
 IgrDataChartCategoryModule.register();
 IgrDataChartInteractivityModule.register();
