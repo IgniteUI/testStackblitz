@@ -3,16 +3,16 @@ import { IgrFinancialChartModule } from 'igniteui-react-charts';
 import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
-import { SharedComponent } from "./SharedComponent";
-import { StocksHistory } from "./StocksHistory";
+import StocksHistory from "./StocksHistory";
 
 IgrFinancialChartModule.register();
 
-export default class FinancialChartMultipleData extends SharedComponent {
+export default class FinancialChartMultipleData extends React.Component<any, any> {
     public data: any[];
 
     constructor(props: any) {
         super(props);
+        this.state = { data: [] };
         this.initData();
     }
 
@@ -33,18 +33,17 @@ export default class FinancialChartMultipleData extends SharedComponent {
                     yAxisMaximumValue={950}
                     yAxisMinimumValue={-100}
                     thickness={2}
-                    dataSource={this.data} />
+                    dataSource={this.state.data} />
                 </div>
             </div>
         );
     }
 
     public initData() {
-        this.data= [
-            StocksHistory.getTesla(),
-            StocksHistory.getAmazon(),
-            StocksHistory.getMicrosoft()
-        ];
+        StocksHistory.getMultipleStocks().then(stock => {
+            console.log("getMultipleStocks " + stock.length);
+            this.setState({ data: stock });
+        });
     }
 }
 

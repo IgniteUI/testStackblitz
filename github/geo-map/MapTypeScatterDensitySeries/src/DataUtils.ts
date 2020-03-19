@@ -4,9 +4,9 @@ export default class DataUtils {
         let path = "";
         // console.log("DataUtils NODE_ENV: " + process.env.NODE_ENV);
         if (process.env.NODE_ENV === "development") {
-            path = "..";
+            path = "https://dl.infragistics.com/xplatform-staging";
         } else {
-            path = "/react-demos";
+            path = "https://dl.infragistics.com/xplatform";
         }
         return path;
     }

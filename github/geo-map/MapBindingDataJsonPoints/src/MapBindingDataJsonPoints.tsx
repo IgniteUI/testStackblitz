@@ -44,10 +44,10 @@ export default class MapBindingDataJsonPoints extends React.Component {
         this.geoMap.windowRect = { left: 0.2, top: 0.1, width: 0.6, height: 0.6 };
     }
 
-    public componentDidMount() {
+    public async componentDidMount() {
         // fetching JSON data with geographic locations from public folder
         const url = DataUtils.getPublicURL();
-        fetch(url + "/Data/WorldCities.json")
+        fetch(url + "/data/WorldCities.json")
             .then((response) => response.json())
             .then(data => this.onDataLoaded(data));
     }

@@ -4,17 +4,17 @@ import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
-import { StocksHistory } from "./StocksHistory";
+import StocksHistory from "./StocksHistory";
 
 IgrFinancialChartModule.register();
 
-export default class FinancialChartTooltipTypes extends SharedComponent {
+export default class FinancialChartTooltipTypes extends React.Component<any, any> {
 
     public data: any[];
 
     constructor(props: any) {
         super(props);
-        this.state = { toolTipType: "Default" }
+        this.state = { toolTipType: "Default", data:[] }
         this.initData();
     }
 
@@ -38,7 +38,7 @@ export default class FinancialChartTooltipTypes extends SharedComponent {
                     chartType="Line"
                     zoomSliderType="None"
                     yAxisMode="PercentChange"
-                    dataSource={this.data}
+                    dataSource={this.state.data}
                     toolTipType={this.state.toolTipType}
                     thickness={2} />
             </div>
@@ -51,11 +51,10 @@ export default class FinancialChartTooltipTypes extends SharedComponent {
     }
 
     public initData() {
-        this.data= [
-            StocksHistory.getTesla(),
-            StocksHistory.getAmazon(),
-            StocksHistory.getMicrosoft()
-        ];
+        StocksHistory.getMultipleStocks().then(stock => {
+            console.log("getMultipleStocks " + stock.length);
+            this.setState({ data: stock });
+        });
     }
 }
 

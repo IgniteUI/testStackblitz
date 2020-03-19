@@ -1,7 +1,8 @@
 import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
-import "./flags.ts";
+import DataUtils from "./DataUtils";
+
 import { IgrLiveGridModule } from 'igniteui-react-grids';
 import { IgrLiveGrid } from 'igniteui-react-grids';
 import { IgrImageColumn } from 'igniteui-react-grids';
@@ -84,7 +85,9 @@ export default class DataGridBindingLocalData extends React.Component<any, any> 
     }
 
     public getCountryFlag(country: string): string {
-        return require('./flags/' + country + '.png');
+        const url = DataUtils.getPublicURL();
+        const flag = url + '/images/flags/' + country + '.png'
+        return flag;
     }
 
     public initData() {

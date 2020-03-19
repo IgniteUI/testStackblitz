@@ -1,7 +1,6 @@
 export class TaskUtil {
 
-    private static tasks: any = {};
-
+ 
     public static start(taskName: string) {
         this.tasks[taskName] = new Date();
     }
@@ -18,4 +17,7 @@ export class TaskUtil {
             return duration;
         }
     }
+
+    private static tasks: any = {};
+
 }

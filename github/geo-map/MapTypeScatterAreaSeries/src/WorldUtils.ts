@@ -69,7 +69,7 @@ export default class WorldUtils {
         lon = this.toDegrees(lon);
         lat = this.toDegrees(lat);
 
-        return { lon: lon, lat: lat };
+        return { '{lon}': lon, '{lat}': lat };
     }
 
     // calculate distance between two locations
@@ -88,7 +88,7 @@ export default class WorldUtils {
     public static toRadianLocation(geoPoint: any) : any {
         let x = this.toRadians(geoPoint.lon);
         let y = this.toRadians(geoPoint.lat);
-        return { lon: x, lat: y };
+        return { '{lon}': x, '{lat}': y };
     }
 
     public static toRadians(degrees: number) : number
@@ -189,10 +189,10 @@ export default class WorldUtils {
         }
 
         const geoBounds = {
-            left: minLon,
-            top: minLat,
-            width: Math.abs(maxLon - minLon),
-            height: Math.abs(maxLat - minLat)
+            '{left}': minLon,
+            '{top}': minLat,
+            '{width}': Math.abs(maxLon - minLon),
+            '{height}': Math.abs(maxLat - minLat)
         };
         return geoBounds;
     }
@@ -207,13 +207,13 @@ export default class WorldUtils {
             // let line: any[] = [{x: lon, y: -90}, {x: lon, y: 90}];
             let x = lon;
             let y = 75 * Math.cos(lon * Math.PI / 180);
-            line.push({x: x, y: y});
+            line.push({'{x}': x, '{y}': y});
         }
         // line.push({x: 180, y: 90});
         // line.push({x: -180, y: 90});
         // line.push({x: -180, y: -90});
 
-        let coordinateLine = {points: [line]};
+        let coordinateLine = {'{points}': [line]};
 
         nightShape.push(coordinateLine);
 

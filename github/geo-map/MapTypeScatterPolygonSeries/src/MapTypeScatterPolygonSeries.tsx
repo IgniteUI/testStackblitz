@@ -1,10 +1,10 @@
 import * as React from "react";
 import "../styles.css";
 import "./GeoMapStyles.css";
-import DataUtils from "./DataUtils"
-import WorldUtils from "./WorldUtils"
-import LegendItem from "./LegendItem"
-import LegendOverlay from "./LegendOverlay"
+import DataUtils from "./DataUtils";
+import WorldUtils from "./WorldUtils";
+import LegendItem from "./LegendItem";
+import LegendOverlay from "./LegendOverlay";
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
@@ -61,7 +61,7 @@ export default class MapTypeScatterPolygonSeries extends React.Component {
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
         sds.shapefileSource = url + "/shapes/WorldCountries.shp";
-        sds.databaseSource  = url + "/shapes/WorldCountries.dbf";
+        sds.databaseSource = url + "/shapes/WorldCountries.dbf";
         sds.dataBind();
     }
 

@@ -18,7 +18,7 @@ import { IgrTemplateCellInfo } from 'igniteui-react-grids';
 // data chart's elements for category series:
 import { IgrNumericYAxis } from 'igniteui-react-charts';
 import { IgrCategoryXAxis } from 'igniteui-react-charts';
-import { IgrColumnSeries } from 'igniteui-react-charts';
+import { IgrLineSeries } from 'igniteui-react-charts';
 // data chart's modules:
 import { IgrDataChart } from 'igniteui-react-charts';
 import { IgrDataChartCoreModule } from 'igniteui-react-charts';
@@ -80,7 +80,7 @@ export default class ExcelLibrarySparklines extends SharedComponent {
                 <IgrCategoryXAxis name="xAxis" labelVisibility="Collapsed" />
                 <IgrNumericYAxis name="yAxis" minValue={0} labelVisibility="Collapsed" />
 
-                <IgrColumnSeries name="series" xAxisName="xAxis" yAxisName="yAxis" valueMemberPath="Freight" />
+                <IgrLineSeries name="series" xAxisName="xAxis" yAxisName="yAxis" valueMemberPath="Freight" />
             </IgrDataChart>
         );
     }
@@ -117,7 +117,7 @@ export default class ExcelLibrarySparklines extends SharedComponent {
 
             for (let j = 0; j < headers.length; j++) {
                 if (j === 0) {
-                    exportSheet.sparklineGroups().add(SparklineType.Column, "A" + (i + 2).toString(), "Orders!A" + index + ":F" + index);
+                    exportSheet.sparklineGroups().add(SparklineType.Line, "A" + (i + 2).toString(), "Orders!A" + index + ":F" + index);
                 }
                 else {
                     exportSheet.rows(i + 1).cells(j).value = dataItem[keys[j]];

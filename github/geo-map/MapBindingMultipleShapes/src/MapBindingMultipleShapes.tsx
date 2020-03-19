@@ -91,20 +91,20 @@ export default class MapBindingMultipleShapes extends React.Component<any,any> {
         const sdsPolygons = new IgrShapeDataSource();
         sdsPolygons.importCompleted = this.onPolygonsLoaded;
         sdsPolygons.shapefileSource = url + "/shapes/WorldCountries.shp";
-        sdsPolygons.databaseSource  = url + "/shapes/WorldCountries.dbf";
+        sdsPolygons.databaseSource = url + "/shapes/WorldCountries.dbf";
         sdsPolygons.dataBind();
 
         const sdsPolylines = new IgrShapeDataSource();
         sdsPolylines.importCompleted = this.onPolylinesLoaded;
         sdsPolylines.shapefileSource = url + "/shapes/WorldCableRoutes.shp";
-        sdsPolylines.databaseSource  = url + "/shapes/WorldCableRoutes.dbf";
+        sdsPolylines.databaseSource = url + "/shapes/WorldCableRoutes.dbf";
         sdsPolylines.dataBind();
 
         // loading a shapefile with geographic points
         const sdsPoints = new IgrShapeDataSource();
         sdsPoints.importCompleted = this.onPointsLoaded;
         sdsPoints.shapefileSource = url + "/Shapes/WorldCities.shp";
-        sdsPoints.databaseSource  = url + "/Shapes/WorldCities.dbf";
+        sdsPoints.databaseSource = url + "/Shapes/WorldCities.dbf";
         sdsPoints.dataBind();
     }
 

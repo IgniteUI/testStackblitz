@@ -48,7 +48,7 @@ export default class DataGridColumnSummaries extends React.Component<any, any> {
                 <IgrLiveGrid
                     ref={this.onGridRef}
                     summaryScope = {this.state.summaryScope}
-                    groupSummaryDisplayMode = {this.state.groupSummaryDisplayMode}
+                    // groupSummaryDisplayMode = {this.state.groupSummaryDisplayMode}
                     height="calc(100% - 40px)"
                     width="100%"
                     autoGenerateColumns="false"
@@ -76,7 +76,7 @@ export default class DataGridColumnSummaries extends React.Component<any, any> {
         this.setState( {summaryScope: e.target.value} );
     }
     public onGroupSummaryDisplayModeChanging = (e: any) => {
-        this.grid.groupSummaryDisplayMode = e.target.value;
+        // this.grid.groupSummaryDisplayMode = e.target.value;
         this.setState( {groupSummaryDisplayMode: e.target.value} );
     }
     public onGridRef(grid: IgrLiveGrid) {
@@ -131,14 +131,14 @@ export default class DataGridColumnSummaries extends React.Component<any, any> {
         const orderDateMin = new IgrColumnSummaryDescription();
         orderDateMin.propertyPath = "OrderDate";
         orderDateMin.operand = SummaryOperand.Min;
-        orderDateMin.calculatorDisplayName = "First"  
+        // orderDateMin.calculatorDisplayName = "First"  
         orderDateMin.formatOverride = new Intl.DateTimeFormat('en-EN');
         this.grid.summaryDescriptions.add(orderDateMin);
 
         const orderDateMax = new IgrColumnSummaryDescription();
         orderDateMax.propertyPath = "OrderDate";
         orderDateMax.operand = SummaryOperand.Max; 
-        orderDateMax.calculatorDisplayName = "Last" 
+        // orderDateMax.calculatorDisplayName = "Last" 
         orderDateMax.formatOverride = new Intl.DateTimeFormat('en-EN');
         this.grid.summaryDescriptions.add(orderDateMax);
 

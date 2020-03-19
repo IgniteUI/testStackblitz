@@ -50,7 +50,7 @@ export default class MapBindingShapefilePoints extends React.Component {
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
         sds.shapefileSource = url + "/Shapes/WorldCities.shp";
-        sds.databaseSource  = url + "/Shapes/WorldCities.dbf";
+        sds.databaseSource = url + "/Shapes/WorldCities.dbf";
         sds.dataBind();
     }
 

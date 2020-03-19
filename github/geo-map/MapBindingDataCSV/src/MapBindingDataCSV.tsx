@@ -45,7 +45,7 @@ export default class MapBindingDataCSV extends React.Component {
     public componentDidMount() {
         // fetching JSON data with geographic locations from public folder
         const url = DataUtils.getPublicURL();
-        fetch(url + "/Data/UsaCitiesPopulation.csv")
+        fetch(url + "/data/UsaCitiesPopulation.csv")
             .then((response) => response.text())
             .then(data => this.onDataLoaded(data));
     }

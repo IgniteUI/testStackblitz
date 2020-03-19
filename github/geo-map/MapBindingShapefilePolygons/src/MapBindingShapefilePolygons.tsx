@@ -50,7 +50,7 @@ export default class MapBindingShapefilePolygons extends React.Component<any,any
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
         sds.shapefileSource = url + "/shapes/WorldCountries.shp";
-        sds.databaseSource  = url + "/shapes/WorldCountries.dbf";
+        sds.databaseSource = url + "/shapes/WorldCountries.dbf";
         sds.dataBind();
     }
 

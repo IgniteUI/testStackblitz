@@ -5,13 +5,12 @@ import { IgrLegendModule } from 'igniteui-react-charts';
 import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
-import { SharedComponent } from "./SharedComponent";
-import { StocksHistory } from "./StocksHistory";
+import StocksHistory from "./StocksHistory";
 
 IgrFinancialChartModule.register();
 IgrLegendModule.register();
 
-export default class FinancialChartOverview extends SharedComponent {
+export default class FinancialChartOverview extends React.Component<any, any> {
 
     public data: any[];
     public chart: IgrFinancialChart;
@@ -22,7 +21,7 @@ export default class FinancialChartOverview extends SharedComponent {
 
         this.onChartRef = this.onChartRef.bind(this);
         this.onLegendRef = this.onLegendRef.bind(this);
-        this.state = { chartType: "Auto" }
+        this.state = { chartType: "Auto", data: [] }
         this.initData();
     }
 
@@ -42,7 +41,7 @@ export default class FinancialChartOverview extends SharedComponent {
                         chartTitle="Tesla vs Amazon"
                         subtitle="Between 2013 and 2017"
                         isToolbarVisible={true}
-                        dataSource={this.data}
+                        dataSource={this.state.data}
                         yAxisMode="PercentChange"
                         thickness={2} />
                 </div>
@@ -65,10 +64,10 @@ export default class FinancialChartOverview extends SharedComponent {
     }
 
     public initData() {
-        this.data = [
-            StocksHistory.getAmazon(),
-            StocksHistory.getTesla()
-        ];
+        StocksHistory.getMultipleStocks().then(stock => {
+            console.log("getMultipleStocks " + stock.length);
+            this.setState({ data: stock });
+        });
     }
 }
 

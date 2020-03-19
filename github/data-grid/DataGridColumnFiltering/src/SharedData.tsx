@@ -1,3 +1,4 @@
+import DataUtils from "./DataUtils";
 export class SharedData {
 
     public static getEmployees(count?: number): any[] {
@@ -246,19 +247,27 @@ export class SharedData {
     }
 
     private static getPhotoMale(id: number): string {
-        return require('./assets/GUY' + this.pad(id, 2) + '.png');
+        const url = DataUtils.getPublicURL();
+        const gender = url + "/images/assets/GUY" + this.pad(id, 2) + '.png';
+        return gender;
     }
 
     private static getPhotoFemale(id: number): string {
-        return require('./assets/GIRL' + this.pad(id, 2) + '.png');
+        const url = DataUtils.getPublicURL();
+        const gender = url + "/images/assets/GIRL" + this.pad(id, 2) + '.png';
+        return gender;
     }
 
     private static getGenderPhoto(gender: string): string {
-        return require('./genders/' + gender + '.png');
+        const url = DataUtils.getPublicURL();
+        const genderPhoto = url + "/images/genders/" + gender + '.png';
+        return genderPhoto;
     }
 
     private static getCountryFlag(country: string): string {
-        return require('./flags/' + country + '.png');
+        const url = DataUtils.getPublicURL();
+        const flag = url + "/images/flags/" + country + '.png';
+        return flag;
     }
 
     private static pad(num: number, size: number) {

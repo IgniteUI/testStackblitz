@@ -1,3 +1,5 @@
+import DataUtils from "./DataUtils";
+
 export class Products {
 
     public static names: string[] = [
@@ -84,7 +86,8 @@ export class Products {
     }
 
     public static getCountryFlag(country: string): string {
-        const flag = 'https://github.com/HUSSAR-mtrela/geo-data/raw/master/flags/' + country + '.png'
+        const url = DataUtils.getPublicURL();
+        const flag = url + '/images/flags/' + country + '.png'
         // console.log("getCountryFlag " + flag)
         return flag;
     }

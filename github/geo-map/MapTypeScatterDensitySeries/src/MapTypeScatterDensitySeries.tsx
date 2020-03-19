@@ -1,9 +1,9 @@
 import * as React from "react";
 import "../styles.css";
 import "./GeoMapStyles.css";
-import DataUtils from "./DataUtils"
-import WorldUtils from "./WorldUtils"
-import LegendOverlay from "./LegendOverlay"
+import DataUtils from "./DataUtils";
+import WorldUtils from "./WorldUtils";
+import LegendOverlay from "./LegendOverlay";
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
@@ -47,7 +47,7 @@ export default class MapTypeScatterDensitySeries extends React.Component {
     public componentDidMount() {
         // fetching geographic locations from public JSON folder
         const url = DataUtils.getPublicURL();
-        fetch(url + "/Data/AusPlaces.csv")
+        fetch(url + "/data/AusPlaces.csv")
             .then((response) => response.text())
             .then(data => this.onDataLoaded(data));
     }
