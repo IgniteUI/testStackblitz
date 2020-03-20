@@ -1,5 +1,5 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import CategoryChartMarkers from './CategoryChartMarkers';
-// ReactDOM.render(<CategoryChartMarkers />, document.getElementById('root'));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CategoryChartMarkers from './CategoryChartMarkers';
+ReactDOM.render(<CategoryChartMarkers />, document.getElementById('root'));
 
