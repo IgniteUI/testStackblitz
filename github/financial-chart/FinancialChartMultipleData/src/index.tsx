@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import FinancialChartMultipleData from './FinancialChartMultipleData';
-ReactDOM.render(<FinancialChartMultipleData />, document.getElementById('root'));
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import FinancialChartMultipleData from './FinancialChartMultipleData';
+// ReactDOM.render(<FinancialChartMultipleData />, document.getElementById('root'));
 

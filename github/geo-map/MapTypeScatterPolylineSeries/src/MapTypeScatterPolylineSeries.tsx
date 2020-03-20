@@ -54,8 +54,8 @@ export default class MapTypeScatterPolylineSeries extends React.Component {
         const url = DataUtils.getPublicURL();
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
-        sds.shapefileSource = url + "/Shapes/AmericanRoads.shp";
-        sds.databaseSource = url + "/Shapes/AmericanRoads.dbf";
+        sds.shapefileSource = url + "/shapes/AmericanRoads.shp";
+        sds.databaseSource = url + "/shapes/AmericanRoads.dbf";
         sds.dataBind();
     }
 

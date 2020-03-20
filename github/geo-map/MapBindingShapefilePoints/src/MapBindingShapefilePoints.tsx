@@ -49,8 +49,8 @@ export default class MapBindingShapefilePoints extends React.Component {
         // loading a shapefile with geographic points
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
-        sds.shapefileSource = url + "/Shapes/WorldCities.shp";
-        sds.databaseSource = url + "/Shapes/WorldCities.dbf";
+        sds.shapefileSource = url + "/shapes/WorldCities.shp";
+        sds.databaseSource = url + "/shapes/WorldCities.dbf";
         sds.dataBind();
     }
 

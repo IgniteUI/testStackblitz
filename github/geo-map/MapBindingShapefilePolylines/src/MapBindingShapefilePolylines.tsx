@@ -48,7 +48,7 @@ export default class MapBindingShapefilePolylines extends React.Component<any,an
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
         sds.shapefileSource = url + "/shapes/WorldCableRoutes.shp";
-        sds.databaseSource = url + "/shapes/WorldCableRoutes.shp";
+        sds.databaseSource = url + "/shapes/WorldCableRoutes.dbf";
         sds.dataBind();
     }
 

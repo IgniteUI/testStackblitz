@@ -2,6 +2,7 @@ import * as React from "react";
 import "./GeoMapStyles.css";
 import DataUtils from "./DataUtils";
 import LegendOverlay from "./LegendOverlay";
+import "./LegendOverlay.css";
 import SourceInfo from "./SourceInfo";
 import "./SourceInfo.css";
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
@@ -54,8 +55,8 @@ export default class MapTypeScatterContourSeries extends React.Component<any, an
         const url = DataUtils.getPublicURL();
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
-        sds.shapefileSource = url + "/Shapes/WorldTemperatures.shp";
-        sds.databaseSource = url + "/Shapes/WorldTemperatures.dbf";
+        sds.shapefileSource = url + "/shapes/WorldTemperatures.shp";
+        sds.databaseSource = url + "/shapes/WorldTemperatures.dbf";
         sds.dataBind();
     }
 

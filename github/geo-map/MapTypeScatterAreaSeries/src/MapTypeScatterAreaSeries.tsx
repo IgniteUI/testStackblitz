@@ -54,8 +54,8 @@ export default class MapTypeScatterAreaSeries extends React.Component<any, any> 
         // loading a shapefile with geographic shapes
         const sds = new IgrShapeDataSource();
         sds.importCompleted = this.onDataLoaded;
-        sds.shapefileSource = url + "/Shapes/WorldTemperatures.shp";
-        sds.databaseSource = url + "/Shapes/WorldTemperatures.dbf";
+        sds.shapefileSource = url + "/shapes/WorldTemperatures.shp";
+        sds.databaseSource = url + "/shapes/WorldTemperatures.dbf";
         sds.dataBind();
     }
 

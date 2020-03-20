@@ -103,8 +103,8 @@ export default class MapBindingMultipleShapes extends React.Component<any,any> {
         // loading a shapefile with geographic points
         const sdsPoints = new IgrShapeDataSource();
         sdsPoints.importCompleted = this.onPointsLoaded;
-        sdsPoints.shapefileSource = url + "/Shapes/WorldCities.shp";
-        sdsPoints.databaseSource = url + "/Shapes/WorldCities.dbf";
+        sdsPoints.shapefileSource = url + "/shapes/WorldCities.shp";
+        sdsPoints.databaseSource = url + "/shapes/WorldCities.dbf";
         sdsPoints.dataBind();
     }
 

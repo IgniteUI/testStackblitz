@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import LinearGaugeAnimation from './LinearGaugeAnimation';
-ReactDOM.render(<LinearGaugeAnimation />, document.getElementById('root'));
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import LinearGaugeAnimation from './LinearGaugeAnimation';
+// ReactDOM.render(<LinearGaugeAnimation />, document.getElementById('root'));
 

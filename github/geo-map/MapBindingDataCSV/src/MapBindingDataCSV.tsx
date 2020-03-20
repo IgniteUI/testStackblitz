@@ -47,7 +47,8 @@ export default class MapBindingDataCSV extends React.Component {
         const url = DataUtils.getPublicURL();
         fetch(url + "/data/UsaCitiesPopulation.csv")
             .then((response) => response.text())
-            .then(data => this.onDataLoaded(data));
+            .then(data => this.onDataLoaded(data))
+            .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
     }
 
     public onDataLoaded(csvData: string) {
