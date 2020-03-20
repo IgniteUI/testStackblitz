@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SharedStyles.css';
+import "./SharedStyles.css";
 import { FinancialData } from "./FinancialData";
 import { TaskUtil } from "./TaskUtil";
 // IgrLiveGrid modules

@@ -3,7 +3,8 @@ import "./GeoMapStyles.css";
 import DataUtils from "./DataUtils";
 import WorldUtils from "./WorldUtils";
 import LegendOverlay from "./LegendOverlay";
-
+import SourceInfo from "./SourceInfo";
+import "./SourceInfo.css";
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
 import { IgrGeographicScatterAreaSeries } from 'igniteui-react-maps';

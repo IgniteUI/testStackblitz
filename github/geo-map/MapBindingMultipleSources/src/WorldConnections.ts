@@ -1,5 +1,5 @@
 import WorldLocations from "./WorldLocations";
-import WorldUtils from "./WorldUtils"
+import WorldUtils from "./WorldUtils";
 
 export default class WorldConnections {
         

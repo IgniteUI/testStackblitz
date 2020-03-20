@@ -1,9 +1,8 @@
 import React from 'react';
-
 import "../styles.css";
 import "./SharedStyles.css";
-
-import { SharedData } from './SharedData';
+import DataUtils from "./DataUtils";
+import { SharedData } from "./SharedData";
 import { IgrLiveGrid } from 'igniteui-react-grids';
 import { IgrLiveGridModule } from 'igniteui-react-grids';
 import { IgrTextColumn } from 'igniteui-react-grids';

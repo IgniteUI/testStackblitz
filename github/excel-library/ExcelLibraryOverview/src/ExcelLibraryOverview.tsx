@@ -3,11 +3,12 @@ import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 import { SharedData } from "./SharedData";
+import { ExcelUtility } from "./ExcelUtility";
 import { IgrExcelModule } from 'igniteui-react-excel';
 import { Workbook } from 'igniteui-react-excel';
 import { Worksheet } from 'igniteui-react-excel';
 import { WorkbookFormat } from 'igniteui-react-excel';
-import { ExcelUtility } from './ExcelUtility';
+
 
 IgrExcelModule.register();
 

@@ -1,8 +1,6 @@
 import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
-
-
 import { IgrLiveGridModule } from 'igniteui-react-grids';
 import { IgrLiveGrid } from 'igniteui-react-grids';
 import { IgrColumn } from 'igniteui-react-grids';
@@ -42,7 +40,7 @@ export default class DataGridPerformance extends React.Component<any, any> {
         this.onPriceAmountStyleKey = this.onPriceAmountStyleKey.bind(this);
         this.onPriceAmountCellUpdating = this.onPriceAmountCellUpdating.bind(this);
 
-        for (var i = 0; i < 43; i++) {
+        for (let i = 0; i < 43; i++) {
             this._kpiColumns.push("KPI_" + i);
         }
     }

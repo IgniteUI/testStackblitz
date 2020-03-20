@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../styles.css";
-import './odatajs-4.0.0';
+import "./odatajs-4.0.0";
 import "./SharedStyles.css";
 
 import { IgrLiveGridModule } from 'igniteui-react-grids';

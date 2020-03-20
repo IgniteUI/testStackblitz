@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import "./LegendOverlay.css";
-import SourceInfo from "./SourceInfo"
+import SourceInfo from "./SourceInfo";
 
 export default class LegendOverlay extends React.Component<any, any> {
 

@@ -7,7 +7,7 @@ import { IgrLiveGrid } from 'igniteui-react-grids';
 import { Workbook } from 'igniteui-react-excel';
 import { WorkbookFormat } from 'igniteui-react-excel';
 import { WorksheetRegion } from 'igniteui-react-excel';
-import { ExcelUtility } from './ExcelUtility';
+import { ExcelUtility } from "./ExcelUtility";
 
 IgrLiveGridModule.register();
 
