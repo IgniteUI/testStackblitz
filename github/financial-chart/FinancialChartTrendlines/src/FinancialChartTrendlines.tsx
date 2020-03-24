@@ -53,7 +53,7 @@ export default class FinancialChartTrendlines extends React.Component<any, any> 
                     brushes="rgba(5, 138, 0, 1), rgba(0, 101, 209, 1)"
                     chartTitle="Tesla vs Amazon Trend"
                     subtitle="Between 2013 and 2017"
-                    dataSource={this.data}
+                    dataSource={this.state.data}
                     zoomSliderType="None"
                     chartType="Line" />
             </div>
