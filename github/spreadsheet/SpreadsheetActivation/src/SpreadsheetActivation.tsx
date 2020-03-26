@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles.css";
 import "./SharedStyles.css";
-
+import DataUtils from "./DataUtils";
 import { IgrExcelXlsxModule } from 'igniteui-react-excel';
 import { IgrExcelCoreModule } from 'igniteui-react-excel';
 import { IgrExcelModule } from 'igniteui-react-excel';
@@ -18,7 +18,6 @@ import { SharedComponent } from "./SharedComponent";
 IgrExcelCoreModule.register();
 IgrExcelModule.register();
 IgrExcelXlsxModule.register();
-
 IgrSpreadsheetModule.register();
 
 export default class SpreadsheetActivation extends SharedComponent {
@@ -65,8 +64,8 @@ export default class SpreadsheetActivation extends SharedComponent {
     }
     public onSpreadsheetRef(ss: IgrSpreadsheet) {
          this.spreadsheet = ss;
-
-         ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/SalesData.xlsx").then((w) => {
+         const url = DataUtils.getPublicURL();
+         ExcelUtility.loadFromUrl(url + "/excel/SalesData.xlsx").then((w) => {
             this.spreadsheet.workbook = w;
             this.spreadsheet.activeCell = new SpreadsheetCell("C15");
         });

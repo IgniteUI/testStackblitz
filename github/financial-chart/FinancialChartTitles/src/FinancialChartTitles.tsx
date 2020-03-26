@@ -5,7 +5,7 @@ import "../styles.css";
 import "./SharedStyles.css";
 import "./SharedComponent";
 import StocksHistory from "./StocksHistory";
-import DataUtils from "./DataUtils";
+import "./DataUtils";
 
 IgrFinancialChartModule.register();
 

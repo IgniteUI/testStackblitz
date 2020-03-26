@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles.css";
 import "./SharedStyles.css";
-
+import DataUtils from "./DataUtils";
 import { IgrExcelXlsxModule } from 'igniteui-react-excel';
 import { IgrExcelCoreModule } from 'igniteui-react-excel';
 import { IgrExcelModule } from 'igniteui-react-excel';
@@ -47,7 +47,8 @@ export default class SpreadsheetClipboard extends SharedComponent {
 
     public onSpreadsheetRef(spreadsheet: IgrSpreadsheet) {
         this.spreadsheet = spreadsheet;
-        ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/SalesData.xlsx").then((w) => {
+        const url = DataUtils.getPublicURL();
+        ExcelUtility.loadFromUrl(url + "/excel/SalesData.xlsx").then((w) => {
             this.spreadsheet.workbook = w;
         });
     }

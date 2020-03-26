@@ -3,7 +3,7 @@ import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent } from "./SharedComponent";
 import { Products } from "./Products";
-import DataUtils from "./DataUtils";
+import "./DataUtils";
 
 // sparkline modules:
 import { IgrSparkline } from 'igniteui-react-charts';

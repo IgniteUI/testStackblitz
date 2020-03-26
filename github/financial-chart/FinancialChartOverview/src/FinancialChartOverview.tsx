@@ -6,7 +6,7 @@ import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
 import StocksHistory from "./StocksHistory";
-import DataUtils from "./DataUtils";
+import "./DataUtils";
 
 IgrFinancialChartModule.register();
 IgrLegendModule.register();

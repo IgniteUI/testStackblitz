@@ -2,7 +2,7 @@ import * as React from "react";
 import "../styles.css";
 import "./SharedStyles.css";
 import { SharedData } from "./SharedData";
-import DataUtils from "./DataUtils";
+import "./DataUtils";
 
 export default class DataGridResponsiveLayout extends React.Component<any, any> {
 

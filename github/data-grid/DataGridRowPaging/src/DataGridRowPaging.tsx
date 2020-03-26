@@ -3,7 +3,7 @@ import "../styles.css";
 import "./SharedStyles.css";
 import { SharedComponent, IComponentState } from "./SharedComponent";
 import { SharedData } from "./SharedData";
-import DataUtils from "./DataUtils";
+import "./DataUtils";
 import { IgrLiveGrid } from 'igniteui-react-grids';
 import { IgrLiveGridModule } from 'igniteui-react-grids';
 import { IgrTextColumn } from 'igniteui-react-grids';

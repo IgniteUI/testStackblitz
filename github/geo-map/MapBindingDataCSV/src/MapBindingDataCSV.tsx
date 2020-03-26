@@ -3,6 +3,7 @@ import "../styles.css";
 import "./GeoMapStyles.css";
 import DataUtils from "./DataUtils";
 import WorldUtils from "./WorldUtils";
+import "./sandbox.config.json";
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
@@ -48,7 +49,6 @@ export default class MapBindingDataCSV extends React.Component {
         fetch(url + "/data/UsaCitiesPopulation.csv")
             .then((response) => response.text())
             .then(data => this.onDataLoaded(data))
-            .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"));
     }
 
     public onDataLoaded(csvData: string) {
