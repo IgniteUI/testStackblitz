@@ -3,7 +3,7 @@ import "../styles.css";
 import "./GeoMapStyles.css";
 import DataUtils from "./DataUtils";
 import WorldUtils from "./WorldUtils";
-import "./sandbox.config.json";
+import "../sandbox.config.json";
 
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
 import { IgrGeographicMap } from 'igniteui-react-maps';
