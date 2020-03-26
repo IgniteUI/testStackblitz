@@ -4,6 +4,7 @@ import "./GeoMapStyles.css";
 import DataUtils from "./DataUtils";
 import LegendItem from "./LegendItem";
 import LegendOverlay from "./LegendOverlay";
+import "./LegendOverlay.css";
 import SourceInfo from "./SourceInfo";
 import "./SourceInfo.css";
 import { IgrGeographicMapModule } from 'igniteui-react-maps';
