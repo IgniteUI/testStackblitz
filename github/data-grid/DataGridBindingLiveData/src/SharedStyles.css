@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* .sampleContainer {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    min-width: 300px;
-} */
+html,
+body,
+#root,
+.sampleContainer {
+  margin: 0px;
+  height: 100%;
+}
 
 .flex {
     flex: 1;
