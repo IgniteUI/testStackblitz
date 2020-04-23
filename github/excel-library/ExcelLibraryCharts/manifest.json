@@ -1,0 +1,6 @@
+
+{     
+    "additionalDependencies": ["igniteui-react-charts, igniteui-react-grids"],       
+    "sampleName": "ExcelLibraryCharts"             
+}
+        

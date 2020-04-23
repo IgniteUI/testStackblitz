@@ -1,0 +1,6 @@
+
+{     
+    "additionalDependencies": ["igniteui-react-grids, igniteui-react-charts"],       
+    "sampleName": "DataGridBindingLiveData"             
+}
+        

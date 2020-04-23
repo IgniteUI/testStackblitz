@@ -1,0 +1,6 @@
+
+{     
+    "additionalDependencies": ["igniteui-react-gauges"],       
+    "sampleName": "LinearGaugeRanges"             
+}
+        

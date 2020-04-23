@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import { IgrCategoryChartModule } from 'igniteui-react-charts/ES5/igr-category-chart-module';
-import { IgrCategoryChart} from 'igniteui-react-charts/ES5/igr-category-chart';
-import { IIgrCategoryChartProps} from 'igniteui-react-charts/ES5/igr-category-chart';
+import { IgrCategoryChartModule } from 'igniteui-react-charts';
+import { IgrCategoryChart} from 'igniteui-react-charts';
+import { IIgrCategoryChartProps} from 'igniteui-react-charts';
  
 interface IAppProps {
 }
