@@ -4,7 +4,6 @@ import './TreeMapSharedStyles.css';
 import { SampleTreeMapData } from "./WorldPopData";
 import { IgrTreemapModule } from 'igniteui-react-charts';
 import { IgrTreemap } from 'igniteui-react-charts';
-import { IgrTreemapNodeStyleMapping } from 'igniteui-react-charts';
 import { TreemapFillScaleMode } from 'igniteui-react-charts';
 import { TreemapLayoutType } from 'igniteui-react-charts';
 import { TreemapOrientation } from 'igniteui-react-charts';
