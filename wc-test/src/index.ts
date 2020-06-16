@@ -1,4 +1,3 @@
-import "@webcomponents/custom-elements/src/native-shim.js";
 import {
   IgcCategoryChartModule,
   IgcCategoryChartComponent
