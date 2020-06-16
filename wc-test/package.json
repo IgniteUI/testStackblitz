@@ -9,7 +9,7 @@
         "build:prod": "webpack --env.NODE_ENV=production --mode production --config ./webpack.config.js  --progress  --color --display-error-details --bail",
         "serve:dev": "node --max-old-space-size=8192 node_modules/webpack-dev-server/bin/webpack-dev-server.js --env.legacy=false --mode development --config ./webpack.config.js --hot --inline --progress --watch --open",
         "serve:prod": "webpack-dev-server --env.NODE_ENV=production  --mode production --config ./webpack.config.js --port 3000 --host 0.0.0.0 --hot --inline --progress  --watch --open --content-base dist/",
-        "start": "npm run serve:dev",
+        "start": "parcel src/index.html --open",
         "build:legacy": "npm run build:prod:legacy",
         "build:dev:legacy": "webpack --env.legacy=true  --mode development --config ./webpack.config.js --progress --color --display-error-details",
         "build:prod:legacy": "webpack --env.NODE_ENV=production --env.legacy=true  --mode production --config ./webpack.config.js  --progress  --color --display-error-details --bail",
@@ -44,6 +44,7 @@
         "typescript": "^3.7.5",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.11",
-        "webpack-dev-server": "^3.11.0"
+        "webpack-dev-server": "^3.11.0",
+        "parcel-bundler": "^1.6.1"
     }
 }
