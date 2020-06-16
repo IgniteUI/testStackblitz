@@ -66,7 +66,7 @@ module.exports = env => {
       }),
       new HtmlWebpackPlugin({
         title: 'for-cs',
-        template: 'src/index.html'
+        template: 'index.html'
       }),
       new ForkTsCheckerWebpackPlugin()
     ]
