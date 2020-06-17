@@ -18,7 +18,7 @@ import {
 
 import { ModuleManager } from "igniteui-webcomponents-core";
 
-export class SimpleDataGridSample {
+export class SimpleSpreadsheetSample {
 
   private spreadsheet: IgcSpreadsheetComponent;
 
@@ -85,4 +85,4 @@ export class SimpleDataGridSample {
   
 }
 
-let sample = new SimpleDataGridSample();
+let sample = new SimpleSpreadsheetSample();
